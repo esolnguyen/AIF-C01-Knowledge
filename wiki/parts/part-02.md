@@ -13,13 +13,13 @@
 - **What is Fine Tuning?** Retraining a pretrained model's weights (parameters) on a **smaller dataset**. A model's weights are the outputted state of a trained model.
   - We are capturing the model's weights from the output — we are **not creating "new models."**
 - **Supervised Fine Tuning (SFT)**: fine-tuning when the dataset has been **labeled**, so we explicitly tell the model what the data is.
-  - Learns from input→expected-output pairs (labeled); opposite of unsupervised/self-supervised pretraining. Dùng khi bạn có dữ liệu gắn nhãn chất lượng cho một task cụ thể.
+  - Learns from input→expected-output pairs (labeled); opposite of unsupervised/self-supervised pretraining. Use when you have quality labeled data for a specific task.
 - **Pipeline**: Data (Text, Images, Videos, Structured Data) → Training → Base ("pretrained") Model → SFT (retraining) with a smaller dataset → Fine Tuned Model.
 - **Fine-tuning by changing the dataset**:
   - **Instruction Fine-tuning**: dataset of good and bad prompt examples ("I say this, you do that").
     - Teaches the model to *follow instructions/format*, not new facts; how base models become chat/assistant models. Improves how it responds across many tasks.
   - **Domain-Specific Fine-tuning**: dataset with specific knowledge (e.g. Microsoft blogs, Microsoft Learn docs).
-    - Injects *knowledge/vocabulary* of a niche domain (medical, legal, a product) into the weights. Dùng khi model thiếu kiến thức chuyên ngành.
+    - Injects *knowledge/vocabulary* of a niche domain (medical, legal, a product) into the weights. Use when the model lacks specialized domain knowledge.
     > 🎯 Exam: to add fresh/proprietary knowledge without retraining, prefer **RAG**; fine-tuning is for style/behavior or deeply-embedded domain expertise, and is costlier to update.
 - **Removing params / reducing weights — Pruning**: you remove parameters.
   - Removes low-importance weights/neurons to shrink the model → faster inference, less memory, at some accuracy cost. A **model compression** technique (like quantization/distillation).
@@ -29,7 +29,7 @@
   - **Full fine-tuning**: all model weights updated; expensive.
     - Most compute/memory-heavy and highest storage (a full new copy of the model); can give best quality but risks catastrophic forgetting.
   - **Parameter Efficient Fine-Tuning (PEFT)**: updates only a small set of parameters and **freezes the rest**; greatly reduces cost. **LoRA** is a type of PEFT.
-    - **LoRA (Low-Rank Adaptation)** — injects small trainable low-rank adapter matrices while the base weights stay frozen; tiny artifact, cheap to train, swap adapters per task. Đây là cách fine-tune phổ biến nhất khi hạn chế tài nguyên.
+    - **LoRA (Low-Rank Adaptation)** — injects small trainable low-rank adapter matrices while the base weights stay frozen; tiny artifact, cheap to train, swap adapters per task. This is the most common fine-tuning method when resources are limited.
     > 🎯 Exam: PEFT/LoRA = "efficient/low-cost fine-tuning updating few parameters" — pick it over full fine-tuning when the question stresses limited compute/budget.
   - **Last-Layer Fine Tuning**: in-between full fine-tuning and PEFT; freeze all layers except the last and train only the last layer.
 

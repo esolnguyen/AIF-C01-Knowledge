@@ -29,9 +29,9 @@
   - **Amazon Athena** – run SQL against semi-structured data in S3 (e.g. CSV files).
 - **Data Pre-Processing** — change data format so it's ready for ML models:
   - **SageMaker Data Wrangler** – simplify data prep & feature engineering via a visual + natural language interface.
-    - **Data Wrangler** — visual (low-code) tool INSIDE SageMaker Studio; 300+ built-in transforms; end goal = export features for training. 🎯 nhớ: đây là "data prep for ML".
+    - **Data Wrangler** — visual (low-code) tool INSIDE SageMaker Studio; 300+ built-in transforms; end goal = export features for training. 🎯 remember: this is "data prep for ML".
   - **AWS Glue DataBrew** – visual data prep tool to clean and normalize data.
-    - **Glue DataBrew** — no-code data cleaning that lives in Glue (không thuộc SageMaker); general-purpose ETL prep, không gắn riêng ML pipeline.
+    - **Glue DataBrew** — no-code data cleaning that lives in Glue (not part of SageMaker); general-purpose ETL prep, not tied specifically to the ML pipeline.
     > 🎯 Exam: Data Wrangler = SageMaker/ML-centric; DataBrew = Glue/generic ETL prep.
 
 > 📸 Source: Screenshot 2026-07-05 at 15.08.22.png
@@ -39,7 +39,7 @@
 ## AWS Data Wrangler Library
 
 - Open-source library by AWS that **extends the Pandas library to AWS**, connecting Pandas DataFrames to AWS-related services.
-  - **AWS Data Wrangler (awswrangler)** — a **Python/Pandas code library** (now "AWS SDK for pandas"); bạn viết code. Khác hẳn **SageMaker Data Wrangler** = **visual no-code tool** trong Studio. 🎯 bẫy tên trùng.
+  - **AWS Data Wrangler (awswrangler)** — a **Python/Pandas code library** (now "AWS SDK for pandas"); you write code. Completely different from **SageMaker Data Wrangler** = a **visual no-code tool** in Studio. 🎯 a name-collision trap.
 - Note: distinct from *SageMaker* Data Wrangler (the library vs. the SageMaker feature).
 - Offers **abstracted functions** for usual ETL tasks (load/unload data) from **Data Lakes, Data Warehouses, and Databases**.
 - Example usage: `import awswrangler as wr`; `wr.s3.read_csv(...)`; connect to PostgreSQL via a Glue Catalog connection and run `read_sql_query`.
@@ -60,7 +60,7 @@
 ## SageMaker Canvas
 
 - **No-code interface** to prepare data, build, and deploy highly accurate ML models in a unified environment.
-  - **Canvas** — visual point-and-click tool for **business analysts / non-coders**; no notebook required. 🎯 dùng khi câu hỏi nói "no-code / no ML expertise".
+  - **Canvas** — visual point-and-click tool for **business analysts / non-coders**; no notebook required. 🎯 use when the question says "no-code / no ML expertise".
 - Includes: **Data Wrangler, Datasets, Autopilot (AutoML), Ready-to-use models, GenAI**.
 - Cost caveat (important): launching Canvas launches **compute just for the interface**; you must click **Logout** — closing the tab does NOT stop the compute, and AWS does **not display running compute** for this service (risk of unexpected spend). Instructor says he'd avoid using it.
 
@@ -138,9 +138,9 @@
 - Two store types:
   - **Online store** – low-latency, **real-time inference** use cases.
   - **Offline store** – **training and batch inference** (stored in **S3**).
-    - **Online store** — low-latency lookup của **1 record mới nhất** cho real-time inference; **Offline store** — lưu **toàn bộ lịch sử** trên S3 cho training/batch. 🎯 nhớ cặp đối lập: online=fast/latest, offline=history/S3.
+    - **Online store** — low-latency lookup of the **latest single record** for real-time inference; **Offline store** — stores the **full history** on S3 for training/batch. 🎯 remember the opposing pair: online=fast/latest, offline=history/S3.
 - Processing logic authored **only once**; features used for **both training and inference**, reducing **training-serving skew**.
-  - **Training-serving skew** — khi feature ở lúc train khác lúc serve → model kém; Feature Store tránh việc này bằng cách dùng chung 1 định nghĩa feature. 🎯 đây là lý do chính "why use Feature Store".
+  - **Training-serving skew** — when a feature at training time differs from serving time → poor model; Feature Store avoids this by sharing a single feature definition. 🎯 this is the main reason "why use Feature Store".
 
 > 📸 Source: Screenshot 2026-07-05 at 15.15.01.png
 
@@ -164,7 +164,7 @@
 - **Ingest features** from a data source two ways:
   - **Streaming** → **PutRecord API** → Streaming Ingestion API
   - **Batching** → Data Wrangler / Spark Container
-    - **Streaming ingestion** — real-time single-record writes via PutRecord (Kafka/Kinesis); **Batch ingestion** — bulk load qua Data Wrangler/Spark, dùng để **backfill** dữ liệu lịch sử. 🎯 streaming=live, batch=bulk/backfill.
+    - **Streaming ingestion** — real-time single-record writes via PutRecord (Kafka/Kinesis); **Batch ingestion** — bulk load via Data Wrangler/Spark, used to **backfill** historical data. 🎯 streaming=live, batch=bulk/backfill.
 - Feature Store holds **Online Store** and **Offline Store** with **automatic replication** between them.
 - **Serve and reuse features**: Serving API + Offline Store Query feed the **ML Model**; SageMaker Python SDK + SageMaker Studio UI serve **Data Scientists** (to extract training data and register features).
 - Feature Store provides **data and schema validations at ingestion time** to ensure data quality — validates that input data conforms to defined data types and that the input record contains all features (relevant if an offline store is configured).
@@ -235,7 +235,7 @@
 
 - Library for **training and deploying ML models** on SageMaker.
 - **vs boto3**: boto3 (AWS Python SDK) broadly interacts with AWS services; the SageMaker Python SDK integrates specifically with SageMaker and specific ML frameworks/tools.
-  - **SageMaker Python SDK** — high-level, ML-purpose-built (Estimators/Predictors); **boto3** — low-level, generic AWS API for every service. 🎯 SDK = tiện cho ML workflow, boto3 = quyền kiểm soát API thô cho mọi service.
+  - **SageMaker Python SDK** — high-level, ML-purpose-built (Estimators/Predictors); **boto3** — low-level, generic AWS API for every service. 🎯 SDK = convenient for the ML workflow, boto3 = raw API control for every service.
 - **ML frameworks**: MXNet, TensorFlow, Chainer, PyTorch, Sci-Kit Learn.
 - **ML Algorithms**: XGBoost.
 - **Tools**: BYO Model, Secure Training and Inference with VPC.
@@ -255,7 +255,7 @@
 
 - To train a model with the SDK: **1. Prepare a training script, 2. Create an estimator, 3. Call the estimator's `fit` method.**
 - Training script parameters (environment variables):
-  - **Env vars** — SageMaker **injects these into the container** so your script finds data/model paths without hardcoding; you read them (e.g. via `os.environ`). 🎯 chỉ cần nhớ *SM_MODEL_DIR→artifacts to S3*, *SM_CHANNEL_XXXX→input data path*.
+  - **Env vars** — SageMaker **injects these into the container** so your script finds data/model paths without hardcoding; you read them (e.g. via `os.environ`). 🎯 just remember *SM_MODEL_DIR→artifacts to S3*, *SM_CHANNEL_XXXX→input data path*.
   - **SM_MODEL_DIR** – path where the training job writes model artifacts; after training these are uploaded to **S3** for model hosting.
   - **SM_NUM_GPUS** – integer count of GPUs available to the host.
   - **SM_CHANNEL_XXXX** – path to the directory holding input data for a channel (e.g. two channels 'train'/'test' set `SM_CHANNEL_TRAIN` and `SM_CHANNEL_TEST`).
@@ -267,7 +267,7 @@
 ## SageMaker Python SDK – Local Mode
 
 - SDK supports **local mode** — create estimators and deploy them to **your local environment**; test deep learning scripts before running in SageMaker's managed training/hosting.
-  - **Local Mode** — chạy training/inference trong **Docker container trên máy bạn** (instance_type=`"local"`) để debug nhanh & rẻ trước khi trả tiền cho managed instances. 🎯 dùng để test, không phải để train production.
+  - **Local Mode** — runs training/inference in a **Docker container on your machine** (instance_type=`"local"`) to debug quickly & cheaply before paying for managed instances. 🎯 for testing, not for training in production.
 - Install: `pip install 'sagemaker[local]' --upgrade` or `conda install -c conda-forge sagemaker-python-sdk`.
 - **Two ways** to configure local mode globally:
   1. Create `~/.sagemaker/config.yaml` containing `local:\n  local_code: true`. If you enable "local code", you **cannot use the `dependencies` parameter** in your estimator/model.

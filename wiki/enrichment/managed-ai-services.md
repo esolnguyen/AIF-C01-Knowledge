@@ -1,6 +1,6 @@
-# Managed AI Services — Bổ sung (Nhóm A)
+# Managed AI Services — Supplement (Group A)
 
-> Các AWS managed AI services có trong exam guide (AIF-C01) nhưng thiếu trong course. Exam-focused cards: what / features / use cases / trigger keywords / đừng nhầm với.
+> The AWS managed AI services that appear in the exam guide (AIF-C01) but are missing from the course. Exam-focused cards: what / features / use cases / trigger keywords / don't confuse with.
 
 ---
 
@@ -11,146 +11,146 @@
 **Key features:**
 - Batch transcription (audio in S3) + **real-time streaming** transcription.
 - Automatic language identification; **multi-language** support.
-- **Speaker diarization** (phân biệt người nói / "speaker labels").
-- **Custom vocabulary** + **custom language models** (tăng độ chính xác cho thuật ngữ ngành).
-- **Automatic PII redaction / masking** (che thông tin nhạy cảm trong transcript).
-- **Transcribe Medical** (HIPAA-eligible) và **Transcribe Call Analytics** (contact center: sentiment, categories).
-- Output kèm timestamps + confidence scores; hỗ trợ **subtitle** (WebVTT/SRT).
+- **Speaker diarization** (distinguishing speakers / "speaker labels").
+- **Custom vocabulary** + **custom language models** (improve accuracy for industry terminology).
+- **Automatic PII redaction / masking** (hide sensitive information in the transcript).
+- **Transcribe Medical** (HIPAA-eligible) and **Transcribe Call Analytics** (contact center: sentiment, categories).
+- Output includes timestamps + confidence scores; supports **subtitles** (WebVTT/SRT).
 
 **Typical use cases:**
-- Subtitle/caption cho video, meeting notes.
-- Contact center / call analytics, ghi âm cuộc gọi → text.
-- Voice-of-customer, indexing audio để search.
+- Subtitles/captions for video, meeting notes.
+- Contact center / call analytics, call recordings → text.
+- Voice-of-customer, indexing audio for search.
 
-**Chọn service này khi...** đề nói "**convert audio/speech to text**", "transcribe recordings", "generate subtitles/captions", "speaker identification", "call center recordings → text".
+**Choose this service when...** the question says "**convert audio/speech to text**", "transcribe recordings", "generate subtitles/captions", "speaker identification", "call center recordings → text".
 
-**Đừng nhầm với:** **Polly** = ngược lại (text → speech). **Transcribe** = speech→text, còn nếu cần *hiểu ý nghĩa* text (sentiment, entities) thì dùng **Comprehend**, dịch ngôn ngữ thì **Translate**.
+**Don't confuse with:** **Polly** = the reverse (text → speech). **Transcribe** = speech→text; if you need to *understand the meaning* of the text (sentiment, entities) use **Comprehend**, and for language translation use **Translate**.
 
 ---
 
 ## 2. Amazon Translate — Neural Machine Translation
 
-**What it is:** Neural machine translation (NMT) service dịch **text từ ngôn ngữ này sang ngôn ngữ khác**, chất lượng tự nhiên.
+**What it is:** Neural machine translation (NMT) service that translates **text from one language to another** with natural quality.
 
 **Key features:**
-- Neural network–based translation (không phải rule-based); real-time + batch.
+- Neural network–based translation (not rule-based); real-time + batch.
 - **Automatic source language detection**.
-- **Custom terminology** (ép dịch đúng brand names, thuật ngữ) và **Active Custom Translation / parallel data** (tuỳ biến style domain).
-- Hỗ trợ nhiều cặp ngôn ngữ; **PII/profanity masking**.
-- Tích hợp dễ với Transcribe (dịch audio đã transcribe) và Comprehend.
+- **Custom terminology** (force correct translation of brand names, terms) and **Active Custom Translation / parallel data** (customize domain style).
+- Supports many language pairs; **PII/profanity masking**.
+- Integrates easily with Transcribe (translate transcribed audio) and Comprehend.
 
 **Typical use cases:**
-- Localize website/app/content sang nhiều ngôn ngữ.
-- Dịch real-time chat, customer support tickets.
+- Localize website/app/content into multiple languages.
+- Translate real-time chat, customer support tickets.
 - Multilingual pipeline: audio → Transcribe → Translate → (Polly).
 
-**Chọn service này khi...** đề nói "**translate between languages**", "localize content", "multilingual", "convert English → Spanish/…", "real-time language translation".
+**Choose this service when...** the question says "**translate between languages**", "localize content", "multilingual", "convert English → Spanish/…", "real-time language translation".
 
-**Đừng nhầm với:** **Transcribe** = speech→text (cùng ngôn ngữ). **Translate** = text ngôn ngữ A → text ngôn ngữ B. **Comprehend** = phân tích/hiểu text (không đổi ngôn ngữ).
+**Don't confuse with:** **Transcribe** = speech→text (same language). **Translate** = text in language A → text in language B. **Comprehend** = analyze/understand text (does not change the language).
 
 ---
 
 ## 3. Amazon Personalize — Recommendation Engine
 
-**What it is:** Fully managed service tạo **real-time personalized recommendations** (same ML tech như Amazon.com) mà không cần build ML từ đầu.
+**What it is:** Fully managed service that produces **real-time personalized recommendations** (same ML tech as Amazon.com) without building ML from scratch.
 
 **Key features:**
-- Dựa trên **user–item interaction data** (clicks, purchases, views) + optional user/item metadata.
-- **Recipes** (thuật toán dựng sẵn) cho các use case: user personalization, "similar items", personalized ranking, next-best-action.
-- **Real-time** recommendations qua **campaign** hoặc **batch inference**.
-- Xử lý **cold start** (item mới) và cập nhật real-time qua **event tracker**.
-- Managed training/deploy — không tự chọn hyperparameters phức tạp.
+- Based on **user–item interaction data** (clicks, purchases, views) + optional user/item metadata.
+- **Recipes** (prebuilt algorithms) for use cases: user personalization, "similar items", personalized ranking, next-best-action.
+- **Real-time** recommendations via a **campaign** or **batch inference**.
+- Handles **cold start** (new items) and updates in real time via an **event tracker**.
+- Managed training/deploy — you don't have to choose complex hyperparameters yourself.
 
 **Typical use cases:**
 - Product/content recommendations ("recommended for you", "customers also viewed").
 - Personalized search ranking, targeted marketing / notifications.
 - Video/music/news personalization.
 
-**Chọn service này khi...** đề nói "**recommendation system / recommendation engine**", "personalized product suggestions", "customers who bought X also bought", "personalize content per user".
+**Choose this service when...** the question says "**recommendation system / recommendation engine**", "personalized product suggestions", "customers who bought X also bought", "personalize content per user".
 
-**Đừng nhầm với:** **Amazon Forecast** = dự báo time-series (demand, doanh số), không phải gợi ý cá nhân. **Personalize** = recommendations cho từng user. (Fraud Detector = phát hiện gian lận, khác hẳn.)
+**Don't confuse with:** **Amazon Forecast** = time-series forecasting (demand, sales), not personalized recommendations. **Personalize** = recommendations per user. (Fraud Detector = fraud detection, entirely different.)
 
 ---
 
 ## 4. Amazon Textract — Document Extraction (OCR+)
 
-**What it is:** ML service **extract text, handwriting, forms, và tables** từ scanned documents/images — hơn OCR thuần vì hiểu cấu trúc.
+**What it is:** ML service that **extracts text, handwriting, forms, and tables** from scanned documents/images — more than plain OCR because it understands structure.
 
 **Key features:**
-- OCR text + **handwriting**; **Forms** (key–value pairs) và **Tables** extraction giữ nguyên structure.
-- **Queries** feature: hỏi bằng ngôn ngữ tự nhiên ("what is the invoice number?").
-- Specialized APIs: **AnalyzeExpense** (invoices/receipts), **AnalyzeID** (passports, driver's license), **AnalyzeLending** (mortgage).
-- Sync (single-page) + async (multi-page PDF trong S3); trả về **bounding boxes + confidence scores**.
-- Tích hợp **A2I** để human review khi confidence thấp.
+- OCR text + **handwriting**; **Forms** (key–value pairs) and **Tables** extraction that preserves structure.
+- **Queries** feature: ask in natural language ("what is the invoice number?").
+- Specialized APIs: **AnalyzeExpense** (invoices/receipts), **AnalyzeID** (passports, driver's licenses), **AnalyzeLending** (mortgage).
+- Sync (single-page) + async (multi-page PDF in S3); returns **bounding boxes + confidence scores**.
+- Integrates with **A2I** for human review when confidence is low.
 
 **Typical use cases:**
-- Automate xử lý invoices, receipts, forms, ID, contracts.
+- Automate processing of invoices, receipts, forms, IDs, contracts.
 - Intelligent document processing (IDP) pipelines.
-- Feed extracted text vào Comprehend để phân tích.
+- Feed extracted text into Comprehend for analysis.
 
-**Chọn service này khi...** đề nói "**extract text/data from documents/forms/tables**", "scanned PDFs / invoices / receipts", "OCR with structure", "digitize paperwork".
+**Choose this service when...** the question says "**extract text/data from documents/forms/tables**", "scanned PDFs / invoices / receipts", "OCR with structure", "digitize paperwork".
 
-**Đừng nhầm với:** **Rekognition** = phân tích **hình ảnh/video** (objects, faces, labels) — chỉ detect text ngắn trên ảnh; còn **Textract** chuyên **document/form/table** structure. Textract lấy chữ ra, **Comprehend** hiểu ý nghĩa chữ đó.
+**Don't confuse with:** **Rekognition** = analyzing **images/video** (objects, faces, labels) — it only detects short text on images; whereas **Textract** specializes in **document/form/table** structure. Textract pulls the text out, **Comprehend** understands the meaning of that text.
 
 ---
 
 ## 5. Amazon Augmented AI (Amazon A2I) — Human Review Loops
 
-**What it is:** Service để **thêm bước con người review (human-in-the-loop)** vào các dự đoán ML, đặc biệt khi confidence thấp hoặc cần validate.
+**What it is:** Service to **add a human review step (human-in-the-loop)** to ML predictions, especially when confidence is low or validation is needed.
 
 **Key features:**
-- Định nghĩa **human review workflow (flow definition)** với **confidence thresholds** — chỉ route những prediction "khó" cho người xem.
-- Reviewers: **Amazon Mechanical Turk**, **private workforce** (nhân viên nội bộ), hoặc **vendor workforce**.
-- Built-in integration với **Textract** (form review) và **Rekognition** (content moderation); + **custom** workflows cho model bất kỳ (kể cả SageMaker).
-- Kết quả human review → dùng để audit, correct, hoặc cải thiện model.
-- Được nhắc trong Domain 4 (Responsible AI) như tool để **detect/monitor bias & quality**.
+- Define a **human review workflow (flow definition)** with **confidence thresholds** — route only the "hard" predictions to a human.
+- Reviewers: **Amazon Mechanical Turk**, a **private workforce** (internal employees), or a **vendor workforce**.
+- Built-in integration with **Textract** (form review) and **Rekognition** (content moderation); + **custom** workflows for any model (including SageMaker).
+- Human review results → used to audit, correct, or improve the model.
+- Mentioned in Domain 4 (Responsible AI) as a tool to **detect/monitor bias & quality**.
 
 **Typical use cases:**
-- Review predictions low-confidence từ Textract/Rekognition.
-- Content moderation cần người xác nhận.
-- Quality assurance / compliance cho ML output.
+- Review low-confidence predictions from Textract/Rekognition.
+- Content moderation that needs human confirmation.
+- Quality assurance / compliance for ML output.
 
-**Chọn service này khi...** đề nói "**human review / human-in-the-loop**", "review low-confidence predictions", "human oversight of ML output", "human validation workflow".
+**Choose this service when...** the question says "**human review / human-in-the-loop**", "review low-confidence predictions", "human oversight of ML output", "human validation workflow".
 
-**Đừng nhầm với:** **SageMaker Ground Truth** = **label dữ liệu training** (tạo dataset *trước* khi train). **A2I** = review **predictions/inference** của model *đã chạy* (sau train). Cả hai đều dùng human workforce nhưng khác giai đoạn.
+**Don't confuse with:** **SageMaker Ground Truth** = **label training data** (create the dataset *before* training). **A2I** = review the **predictions/inference** of a model *already running* (after training). Both use a human workforce but at different stages.
 
 ---
 
 ## 6. Amazon SageMaker JumpStart — Model Hub & Solution Templates
 
-**What it is:** ML **hub trong SageMaker** cung cấp **pre-trained models, foundation models, và solution templates** để deploy/fine-tune nhanh với vài click.
+**What it is:** An ML **hub inside SageMaker** that provides **pre-trained models, foundation models, and solution templates** to deploy/fine-tune quickly with a few clicks.
 
 **Key features:**
-- Hàng trăm **pre-trained open-source models** + **foundation models (FMs)** cho generative AI (text, image, embeddings).
-- **One-click deploy** và **fine-tune** trên dữ liệu riêng — không cần code từ đầu.
-- **Solution templates** end-to-end (fraud detection, demand forecasting, churn…).
-- Models chạy **trong VPC/account của bạn** (deploy tới SageMaker endpoints) → kiểm soát hơn.
-- Điểm khởi đầu cho generative AI (được nêu ở Domain 2.3 cùng Bedrock/PartyRock/Amazon Q).
+- Hundreds of **pre-trained open-source models** + **foundation models (FMs)** for generative AI (text, image, embeddings).
+- **One-click deploy** and **fine-tune** on your own data — no coding from scratch.
+- End-to-end **solution templates** (fraud detection, demand forecasting, churn…).
+- Models run **in your own VPC/account** (deployed to SageMaker endpoints) → more control.
+- A starting point for generative AI (mentioned in Domain 2.3 alongside Bedrock/PartyRock/Amazon Q).
 
 **Typical use cases:**
-- Nhanh chóng thử/deploy pre-trained model, transfer learning.
-- Fine-tune FM trên data domain riêng.
-- Học/prototype với solution templates dựng sẵn.
+- Quickly try/deploy a pre-trained model, transfer learning.
+- Fine-tune an FM on your own domain data.
+- Learn/prototype with ready-made solution templates.
 
-**Chọn service này khi...** đề nói "**pre-trained models hub**", "quickly deploy / fine-tune models", "solution templates", "get started fast in SageMaker", "open-source models + foundation models to customize".
+**Choose this service when...** the question says "**pre-trained models hub**", "quickly deploy / fine-tune models", "solution templates", "get started fast in SageMaker", "open-source models + foundation models to customize".
 
-**Đừng nhầm với:** **Amazon Bedrock** = **serverless API** truy cập FMs (không quản lý infra, không thấy endpoint) — nhanh nhất để gọi FM. **JumpStart** = trong SageMaker, bạn **deploy/host & fine-tune** model trên infra của mình → nhiều kiểm soát hơn nhưng cần quản lý endpoint.
+**Don't confuse with:** **Amazon Bedrock** = a **serverless API** to access FMs (no infrastructure to manage, no endpoint to see) — the fastest way to call an FM. **JumpStart** = inside SageMaker, you **deploy/host & fine-tune** the model on your own infrastructure → more control but you must manage the endpoint.
 
 ---
 
-## Bảng phân biệt nhanh (dễ nhầm trong đề)
+## Quick disambiguation table (easily confused on the exam)
 
-| Nếu đề nói...                                   | Chọn                     |
+| If the question says...                          | Choose                   |
 |-------------------------------------------------|--------------------------|
 | Speech → text, subtitles, call recordings       | **Transcribe**           |
-| Text → speech (giọng nói)                        | **Polly**                |
-| Dịch giữa các ngôn ngữ                           | **Translate**            |
-| Hiểu/analyze text (sentiment, entities, PII)     | **Comprehend**           |
-| Recommendations cá nhân hoá                      | **Personalize**          |
-| Forecast time-series (demand/doanh số)           | **Forecast**             |
-| Extract text/forms/tables từ documents           | **Textract**             |
-| Phân tích ảnh/video (objects, faces)             | **Rekognition**          |
-| Human review predictions (low confidence)        | **A2I**                  |
-| Label dữ liệu training                           | **Ground Truth**         |
-| Pre-trained/FM hub, deploy & fine-tune           | **JumpStart**            |
-| Serverless API gọi FMs (không quản infra)        | **Bedrock**              |
+| Text → speech (voice)                           | **Polly**                |
+| Translate between languages                     | **Translate**            |
+| Understand/analyze text (sentiment, entities, PII) | **Comprehend**        |
+| Personalized recommendations                    | **Personalize**          |
+| Forecast time-series (demand/sales)             | **Forecast**             |
+| Extract text/forms/tables from documents        | **Textract**             |
+| Analyze images/video (objects, faces)           | **Rekognition**          |
+| Human review of predictions (low confidence)    | **A2I**                  |
+| Label training data                             | **Ground Truth**         |
+| Pre-trained/FM hub, deploy & fine-tune          | **JumpStart**            |
+| Serverless API to call FMs (no infra to manage) | **Bedrock**              |

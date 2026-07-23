@@ -1,26 +1,26 @@
 # 📚 AWS Certified AI Practitioner (AIF-C01) — Study Wiki
 
-Wiki tự học được build từ **284 screenshot** khóa học ExamPro (freeCodeCamp) đã capture trong `../AIC/`.
-Toàn bộ slide đã được đọc, transcribe thành notes chi tiết và phân loại theo **5 exam domain** của kỳ thi AIF-C01.
+Self-study wiki built from **284 screenshots** of the ExamPro (freeCodeCamp) course captured in `../AIC/`.
+Every slide has been read, transcribed into detailed notes, and classified by the **5 exam domains** of the AIF-C01 exam.
 
 ---
 
-## 🗂️ Điều hướng nhanh
+## 🗂️ Quick navigation
 
-| Trang | Mục đích |
+| Page | Purpose |
 |-------|----------|
-| **[INDEX.md](INDEX.md)** | Index đầy đủ — 179 topic theo đúng thứ tự bài giảng, có link tới notes chi tiết |
-| **[PROGRESS.md](PROGRESS.md)** | Bảng checklist theo dõi tiến độ ôn tập, gom theo domain (tick ☐ → ☑) |
-| **[GAP-ANALYSIS.md](GAP-ANALYSIS.md)** | Đối chiếu slide vs official exam guide — chỗ nào đã đủ, chỗ nào cần bổ sung |
-| **[parts/](parts/)** | 10 file notes chi tiết (part-00 → part-09) theo thứ tự slide |
-| **[enrichment/](enrichment/)** | Notes bổ sung vá lỗ hổng: managed AI services, security & governance, business framing |
-| **[practice-questions/](practice-questions/)** | 60 câu trắc nghiệm kiểu đề thi theo 5 domain (có đáp án + giải thích) |
+| **[INDEX.md](INDEX.md)** | Full index — 179 topics in exact lecture order, with links to detailed notes |
+| **[PROGRESS.md](PROGRESS.md)** | Checklist table tracking study progress, grouped by domain (tick ☐ → ☑) |
+| **[GAP-ANALYSIS.md](GAP-ANALYSIS.md)** | Slides vs official exam guide comparison — what's covered, what needs filling in |
+| **[parts/](parts/)** | 10 detailed notes files (part-00 → part-09) in slide order |
+| **[enrichment/](enrichment/)** | Supplementary notes filling gaps: managed AI services, security & governance, business framing |
+| **[practice-questions/](practice-questions/)** | 60 exam-style multiple-choice questions across the 5 domains (with answers + explanations) |
 
 ---
 
 ## 🎯 5 Exam Domains (AIF-C01)
 
-| Domain | Tên | Trọng số thi | Notes ở đâu nhiều |
+| Domain | Name | Exam weight | Where the notes are concentrated |
 |--------|-----|:---:|-----|
 | **D1** | Fundamentals of AI and ML | 20% | part-00, 01, 04, 05, 09 |
 | **D2** | Fundamentals of Generative AI | 24% | part-01, 04 |
@@ -28,13 +28,13 @@ Toàn bộ slide đã được đọc, transcribe thành notes chi tiết và ph
 | **D4** | Guidelines for Responsible AI | 14% | part-04, 07, 09 |
 | **D5** | Security, Compliance & Governance for AI | 14% | part-04, 06, 07, 09 |
 
-> Trọng số theo AWS exam guide chính thức (bản AIF-C01). Dùng để ưu tiên thời gian ôn: **D3 và D2 chiếm hơn nửa đề thi.**
+> Weights are from the official AWS exam guide (AIF-C01 version). Use them to prioritize study time: **D3 and D2 make up more than half of the exam.**
 
 ---
 
-## 📖 Các file notes theo thứ tự bài giảng
+## 📖 Notes files in lecture order
 
-| File | Nội dung chính |
+| File | Main content |
 |------|----------------|
 | [part-00.md](parts/part-00.md) | ML basics: Regression/Classification/Clustering, SL/UL/RL, Neural Networks, Activation Functions, Model/Feature |
 | [part-01.md](parts/part-01.md) | Inference, hyperparameters, data concepts, **GenAI/LLM/Transformer/Tokenization/Embeddings/Attention** |
@@ -49,24 +49,24 @@ Toàn bộ slide đã được đọc, transcribe thành notes chi tiết và ph
 
 ---
 
-## ➕ Enrichment — bổ sung lỗ hổng so với exam guide
+## ➕ Enrichment — filling gaps vs the exam guide
 
-Sau khi đối chiếu với official exam guide ([GAP-ANALYSIS.md](GAP-ANALYSIS.md)), 3 trang sau vá các chỗ slide chưa cover:
+After comparing against the official exam guide ([GAP-ANALYSIS.md](GAP-ANALYSIS.md)), the following 3 pages fill the areas the slides didn't cover:
 
-| File | Nội dung |
+| File | Content |
 |------|----------|
 | [enrichment/managed-ai-services.md](enrichment/managed-ai-services.md) | Transcribe, Translate, Personalize, Textract, Amazon A2I, SageMaker JumpStart |
 | [enrichment/security-governance.md](enrichment/security-governance.md) | IAM, KMS, Macie, PrivateLink, Config, Inspector, Audit Manager, Artifact, CloudTrail, Trusted Advisor + cheat table |
-| [enrichment/business-responsible-framing.md](enrichment/business-responsible-framing.md) | Ưu/nhược GenAI, khi nào không dùng AI, business metrics, rủi ro pháp lý, explainability |
+| [enrichment/business-responsible-framing.md](enrichment/business-responsible-framing.md) | GenAI pros/cons, when not to use AI, business metrics, legal risks, explainability |
 
-## 📝 Luyện đề
+## 📝 Practice
 
-**[practice-questions/](practice-questions/)** — 60 câu trắc nghiệm kiểu đề thi theo 5 domain, có đáp án + giải thích ẩn. Bắt đầu ở [practice-questions/README.md](practice-questions/README.md).
+**[practice-questions/](practice-questions/)** — 60 exam-style multiple-choice questions across the 5 domains, with answers + hidden explanations. Start at [practice-questions/README.md](practice-questions/README.md).
 
 ---
 
-## 🔗 Tài liệu gốc
-- Khóa học: **www.exampro.co/aif-c01** (ExamPro — Andrew Brown)
-- Screenshot gốc: thư mục `../AIC/` (284 file, đặt tên theo timestamp capture)
+## 🔗 Source material
+- Course: **www.exampro.co/aif-c01** (ExamPro — Andrew Brown)
+- Original screenshots: `../AIC/` folder (284 files, named by capture timestamp)
 
 *Wiki generated 2026-07-06.*

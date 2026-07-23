@@ -32,8 +32,8 @@
 *Domain: D3 — Applications of Foundation Models*
 
 - **Amazon Q** is an AI chatbot using multiple LLM models via Amazon Bedrock. Ask it questions similar to ChatGPT / other generative AI chat services.
-  - 🎯 Chọn khi: cần **generative AI assistant** làm sẵn (fully managed, no model to build) cho công việc/coding/BI. Đừng nhầm: **Amazon Q** = ứng dụng chatbot dựng sẵn của AWS; **Amazon Bedrock** = nền tảng để *bạn tự build* GenAI app từ FM (Q chạy *trên* Bedrock).
-  - 🎯 Q Business (RAG trên dữ liệu công ty, 40+ connectors) vs Q Developer (trợ lý code + quản lý tài nguyên AWS). Đừng nhầm: Q Business ≈ enterprise assistant; **Kendra** = search engine thuần (Q Business dùng cơ chế giống Kendra bên dưới nhưng thêm khả năng sinh câu trả lời).
+  - 🎯 Choose when: you need a ready-made **generative AI assistant** (fully managed, no model to build) for work/coding/BI. Don't confuse: **Amazon Q** = AWS's prebuilt chatbot application; **Amazon Bedrock** = a platform for *you to build* GenAI apps from FMs yourself (Q runs *on top of* Bedrock).
+  - 🎯 Q Business (RAG over company data, 40+ connectors) vs Q Developer (code assistant + AWS resource management). Don't confuse: Q Business ≈ enterprise assistant; **Kendra** = a pure search engine (Q Business uses a Kendra-like mechanism underneath but adds answer-generation capability).
 - **Amazon Q Business** — connect it to company data, information, and systems; made simple with more than 40 built-in connectors.
 - **Amazon Q Developer** — coding, testing, upgrading, troubleshooting, and optimizing AWS resources. Integrated into AWS Management Console, VSCode (via AWS Toolkit), Cloud9, AWS Lambda Code Editor, Slack, and other places.
 - **Amazon Q for Amazon QuickSight** — ask questions about your BI data; Generative BI to build visuals, summarize insights, answer data questions, and build data stories using natural language.
@@ -46,7 +46,7 @@
 *Domain: D3 — Applications of Foundation Models*
 
 - **Amazon CodeWhisperer** is a real-time AI coding companion; generates suggested code while you write.
-  - 🎯 Chọn khi: cần **gợi ý/sinh code real-time trong IDE** (autocomplete cả hàm từ comment). Đừng nhầm: CodeWhisperer = *viết code mới*; **CodeGuru** = *review/phân tích code đã có* (bảo mật, hiệu năng). Lưu ý: CodeWhisperer nay đã được gộp vào **Amazon Q Developer**.
+  - 🎯 Choose when: you need **real-time code suggestions/generation in the IDE** (autocomplete whole functions from a comment). Don't confuse: CodeWhisperer = *writes new code*; **CodeGuru** = *reviews/analyzes existing code* (security, performance). Note: CodeWhisperer has now been merged into **Amazon Q Developer**.
 - Integrates with IDEs: AWS Glue Studio Notebook, JetBrains (e.g. IntelliJ IDEA), JupyterLab, Amazon SageMaker Studio, Terminal/shell/command-line, Visual Studio (VS) Code, Visual Studio.
 - Two tiers: **Individual** and **Professional**.
   - **Individual** — authenticate via AWS Builder ID; security vulnerability scanning 50 scans per user/month.
@@ -59,7 +59,7 @@
 *Domain: D3 — Applications of Foundation Models*
 
 - **Amazon CodeGuru** is a machine-learning code analysis service. Performs code-reviews and suggests changes to improve code quality; can show visual code profiles (internals) to pinpoint performance.
-  - 🎯 Chọn khi: cần **tự động review chất lượng/bảo mật code** (Reviewer) hoặc **tìm điểm nghẽn hiệu năng lúc runtime** (Profiler). Đừng nhầm: CodeGuru = *phân tích code có sẵn*; **CodeWhisperer/Q Developer** = *sinh code mới*.
+  - 🎯 Choose when: you need to **automatically review code quality/security** (Reviewer) or **find runtime performance bottlenecks** (Profiler). Don't confuse: CodeGuru = *analyzes existing code*; **CodeWhisperer/Q Developer** = *generates new code*.
 - Three services:
   - **CodeGuru Security** — detect, track, and fix code security issues (Code Security Analytics Scan, Code Quality Analytics Scan, Secrets Detection Scan).
   - **CodeGuru Profiler** — find and fix inefficiencies in code.
@@ -73,7 +73,7 @@
 *Domain: D3 — Applications of Foundation Models*
 
 - **Amazon Comprehend** is a Natural Language Processor (NLP) service. Finds relationships between text to produce insights; analyzes data such as customer emails, support tickets, social media and makes predictions.
-  - 🎯 Chọn khi: cần **phân tích/hiểu văn bản** — sentiment, entities, key phrases, language, PII, topic. Có **Comprehend Medical** cho văn bản y tế (trích PHI/entities lâm sàng). Đừng nhầm: **Comprehend** = phân tích text NLP; **Translate** = dịch ngôn ngữ; **Transcribe** = speech→text; **Textract** = trích text từ ảnh/PDF (OCR); **Kendra** = search tài liệu.
+  - 🎯 Choose when: you need to **analyze/understand text** — sentiment, entities, key phrases, language, PII, topic. There is **Comprehend Medical** for medical text (extracting PHI/clinical entities). Don't confuse: **Comprehend** = NLP text analysis; **Translate** = language translation; **Transcribe** = speech→text; **Textract** = extract text from images/PDFs (OCR); **Kendra** = document search.
 - Can analyze text and extract:
   - **Entities** — e.g. Person, Organization, Location.
   - **Key Phrases** — important text (e.g. amounts/dates).
@@ -94,7 +94,7 @@
 *Domain: D3 — Applications of Foundation Models*
 
 - **Amazon Forecast** is a time-series forecasting service. Forecasts business outcomes such as product demand, resource needs, or financial performance.
-  - 🎯 Chọn khi: cần **dự báo dữ liệu chuỗi thời gian** (demand, inventory, doanh thu theo thời gian) mà không cần build model ML. Đừng nhầm: **Forecast** = time-series tương lai; **SageMaker** = tự build model tùy ý; **Fraud Detector** = phát hiện gian lận (classification), không phải dự báo theo thời gian.
+  - 🎯 Choose when: you need to **forecast time-series data** (demand, inventory, revenue over time) without building an ML model. Don't confuse: **Forecast** = future time-series; **SageMaker** = build any custom model yourself; **Fraud Detector** = fraud detection (classification), not time-based forecasting.
 - Upload dataset to S3 with: Historical data, Additional Metadata (optional).
 - Workflow:
   - **Create Data Set Group / Create Data Import Job** — define the schema, register the task.
@@ -108,7 +108,7 @@
 *Domain: D3 — Applications of Foundation Models*
 
 - **Amazon Fraud Detector** is a fully managed fraud detection service; identifies potentially fraudulent online activities such as online payment fraud and creation of fake accounts.
-  - 🎯 Chọn khi: cần **phát hiện gian lận** online (payment fraud, fake account, account takeover) mà không cần chuyên môn ML. Đừng nhầm: **Fraud Detector** = gian lận giao dịch/tài khoản; **Amazon Macie** = phát hiện dữ liệu nhạy cảm/PII trong S3; **GuardDuty** = phát hiện threat bảo mật hạ tầng.
+  - 🎯 Choose when: you need to **detect online fraud** (payment fraud, fake account, account takeover) without ML expertise. Don't confuse: **Fraud Detector** = transaction/account fraud; **Amazon Macie** = detect sensitive data/PII in S3; **GuardDuty** = detect infrastructure security threats.
 - Predefined models to train your data against:
   - **Online Fraud Insights** — optimized to detect fraud when little historical data is available (e.g. new customer registering online).
   - **Transaction Fraud Insights** — for fraud use cases where the entity being evaluated has a history of interactions the model can analyze to improve accuracy.
@@ -133,7 +133,7 @@
 *Domain: D3 — Applications of Foundation Models*
 
 - **Amazon Kendra** is an enterprise machine learning search engine service. Uses natural language to suggest answers to questions instead of just simple keyword matching.
-  - 🎯 Chọn khi: cần **intelligent document search** trên tài liệu nội bộ doanh nghiệp (semantic search, hỏi bằng ngôn ngữ tự nhiên, kết nối S3/SharePoint...). Là lựa chọn kinh điển cho **RAG knowledge base**. Đừng nhầm: **Kendra** = tìm & trả lời từ tài liệu; **Comprehend** = phân tích NLP văn bản; **Lex** = chatbot hội thoại; **Q Business** = assistant sinh câu trả lời (thêm khả năng generative lên trên search).
+  - 🎯 Choose when: you need **intelligent document search** over internal enterprise documents (semantic search, ask in natural language, connect to S3/SharePoint...). It is the classic choice for a **RAG knowledge base**. Don't confuse: **Kendra** = find & answer from documents; **Comprehend** = NLP text analysis; **Lex** = conversational chatbot; **Q Business** = answer-generating assistant (adds generative capability on top of search).
 - Uses semantic and contextual understanding capabilities on a search query (like interacting with a human) rather than keyword-based search.
 - **Amazon Lex chatbot** can be used as an interface to Amazon Kendra.
 - Components:
@@ -156,7 +156,7 @@
 *Domain: D3 — Applications of Foundation Models*
 
 - **Amazon Lex (V2)** is a conversational interface service. Build conversational voice and text chatbots.
-  - 🎯 Chọn khi: cần **xây chatbot hội thoại** (voice/text), quản lý **intents & slots**; cùng công nghệ với Alexa. Đừng nhầm: **Lex** = build bot hội thoại; **Comprehend** = phân tích NLP; **Kendra** = search tài liệu; **Polly** = text→speech; **Transcribe** = speech→text (Lex có thể ghép Kendra để trả lời, Polly để phát giọng nói).
+  - 🎯 Choose when: you need to **build a conversational chatbot** (voice/text), managing **intents & slots**; same technology as Alexa. Don't confuse: **Lex** = build a conversational bot; **Comprehend** = NLP analysis; **Kendra** = document search; **Polly** = text→speech; **Transcribe** = speech→text (Lex can combine Kendra to answer and Polly to speak).
 - Lex V2 provides: Natural Language Understanding (NLU), Automatic Speech Recognition (ASR).
 - AWS provides multiple bot templates for common industries as starting points; provide transcripts to create a new bot; use Gen AI to build a bot by describing what you want; choose a target language from multiple AWS-provided voices.
 - Integrates with **AWS Lambda** to connect to various AWS services.
@@ -177,7 +177,7 @@
 *Domain: D3 — Applications of Foundation Models*
 
 - **Amazon Polly** is a text-to-speech service. Upload text and an audio file spoken by a synthesized voice is generated.
-  - 🎯 Chọn khi: cần **chuyển text → giọng nói** (đọc bài, IVR, e-learning, lồng tiếng). Đừng nhầm: **Polly** = text→speech; **Transcribe** = speech→text (chiều ngược lại); **Translate** = dịch text; **Lex** = chatbot hội thoại.
+  - 🎯 Choose when: you need to **convert text → speech** (reading content aloud, IVR, e-learning, voice-over). Don't confuse: **Polly** = text→speech; **Transcribe** = speech→text (the reverse direction); **Translate** = translate text; **Lex** = conversational chatbot.
 - **Engine Types:**
   - **Standard ($)** — not as natural sounding as other engines, but most cost effective.
   - **Long Form ($$)** — sounds more natural when reading long forms of text.

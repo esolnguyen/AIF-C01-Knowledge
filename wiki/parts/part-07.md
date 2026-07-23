@@ -16,8 +16,8 @@
 
 ## SageMaker Hosting Services
 - **Hosting Services** = running your ML model on an **ML EC2 instance** (real-time inference).
-  - Real-time = **persistent endpoint** always on, low-latency, synchronous request/response. Dùng khi cần trả lời ngay (một record/lần).
-  > 🎯 Exam: Real-time endpoint = luôn chạy (trả tiền liên tục) cho low-latency. Nếu chỉ cần suy luận theo lô, không cần endpoint thường trực → dùng **Batch Transform** rẻ hơn.
+  - Real-time = **persistent endpoint** always on, low-latency, synchronous request/response. Use when you need an immediate answer (one record at a time).
+  > 🎯 Exam: Real-time endpoint = always running (continuous cost) for low-latency. If you only need batch inference and don't need an always-on endpoint → use **Batch Transform**, which is cheaper.
 - On the **Estimator**, call the **`deploy`** function when ready to deploy for real-time inference.
   - Specify the **ML EC2 instance** to use (e.g. `instance_type='ml.t2.medium'`, `initial_instance_count=1`).
   - `deploy` returns a **Predictor** — a deployable model that launches EC2 server(s) and configures a SageMaker hosting services endpoint.
@@ -28,8 +28,8 @@
 
 ## SageMaker — Batch Transform
 - Instead of hosting a production endpoint, run a **one-time batch inference job** on a test dataset using **batch transform**.
-  - No persistent endpoint: spins up instances, scores the whole dataset from S3, writes results to S3, then shuts down. **Rẻ hơn** khi không cần real-time; tốt cho large datasets & offline scoring.
-  > 🎯 Exam: Batch Transform vs Real-time endpoint là bẫy hay gặp — "no need for a persistent/always-on endpoint", "process a large dataset at once" ⇒ Batch Transform.
+  - No persistent endpoint: spins up instances, scores the whole dataset from S3, writes results to S3, then shuts down. **Cheaper** when you don't need real-time; good for large datasets & offline scoring.
+  > 🎯 Exam: Batch Transform vs Real-time endpoint is a common trap — "no need for a persistent/always-on endpoint", "process a large dataset at once" ⇒ Batch Transform.
 - On the Estimator, create a **`transformer`** — specifies which ML EC2 instance to use (`instance_count`, `instance_type='ml.m4.xlarge'`) and an **S3 output path** (`output_path`).
 - Calling **`transform`** on the transformer starts the batch job — specify an **S3 input path** (`data`, `data_type='S3Prefix'`, `content_type='text/csv'`, `split_type='Line'`), then `transformer.wait()`.
 - When complete, it creates a file at the output path; download results using S3 recursively: `aws s3 cp {batch_output} ./ --recursive`.
@@ -38,8 +38,8 @@
 
 ## Multi-Model Endpoints
 - Save money by **hosting multiple models on a shared serving container**.
-  - **Nhiều models cùng loại/framework** dùng chung 1 container & 1 endpoint; models nạp/xả khỏi memory theo nhu cầu (time-sharing). Lý tưởng cho **nhiều models nhỏ tương tự nhau** (vd. 1 model mỗi khách hàng/khu vực).
-  > 🎯 Exam: Multi-Model = nhiều models **cùng container** (same framework, load on demand) → tiết kiệm chi phí khi có rất nhiều models. Đừng nhầm với Multi-Container (khác framework/container).
+  - **Multiple models of the same type/framework** share 1 container & 1 endpoint; models are loaded/unloaded from memory on demand (time-sharing). Ideal for **many small, similar models** (e.g. 1 model per customer/region).
+  > 🎯 Exam: Multi-Model = multiple models in the **same container** (same framework, load on demand) → saves cost when you have very many models. Don't confuse with Multi-Container (different framework/container).
 - Key facts:
   - Scalable, cost-effective for deploying large numbers of models.
   - Enable **time-sharing of memory resources** across models.
@@ -55,8 +55,8 @@
 
 ## Multi-Container Endpoints
 - SageMaker multi-container endpoints let you **deploy multiple containers** to run different models on a single SageMaker endpoint.
-  - Tối đa **15 containers khác nhau** (có thể khác framework) trên 1 endpoint; gọi trực tiếp từng cái (Direct) hoặc nối chuỗi (Serial/pipeline).
-  > 🎯 Exam: Multi-**Container** = models dùng **framework/container khác nhau**; Multi-**Model** = nhiều models **cùng một container**. Direct mode = chọn container cụ thể qua `TargetContainerHostname`.
+  - Up to **15 different containers** (can be different frameworks) on 1 endpoint; invoke each one directly (Direct) or chain them (Serial/pipeline).
+  > 🎯 Exam: Multi-**Container** = models using **different frameworks/containers**; Multi-**Model** = multiple models in the **same container**. Direct mode = select a specific container via `TargetContainerHostname`.
 - Containers can:
   - Run in a **sequence** as an inference pipeline, OR
   - Be accessed **individually via direct invocation** (`'Mode': 'Direct'`) — improves endpoint utilization and optimizes costs.
@@ -72,8 +72,8 @@
   - Continuous monitoring with a **real-time endpoint**.
   - Continuous monitoring with a **batch transform job** that runs regularly.
   - **On-schedule** monitoring for asynchronous batch transform jobs.
-- Monitors 4 loại: **data quality** (drift vs baseline), **model quality** (accuracy vs ground-truth labels), **bias drift** (dùng Clarify), **feature attribution drift** (SHAP importance đổi). Emits CloudWatch metrics → alert khi lệch baseline.
-  > 🎯 Exam: "Model accuracy giảm dần theo thời gian / data phân phối đổi (drift)" ⇒ **Model Monitor**. Nó phát hiện & cảnh báo, không tự retrain.
+- Monitors 4 types: **data quality** (drift vs baseline), **model quality** (accuracy vs ground-truth labels), **bias drift** (uses Clarify), **feature attribution drift** (SHAP importance changes). Emits CloudWatch metrics → alerts when it deviates from baseline.
+  > 🎯 Exam: "Model accuracy degrades over time / data distribution changes (drift)" ⇒ **Model Monitor**. It detects & alerts, it does not retrain automatically.
 
 > 📸 Source: Screenshot 2026-07-05 at 15.31.32.png
 
@@ -82,7 +82,7 @@
   - Catalog models for production, manage model versions, associate metadata (e.g. training metrics), manage approval status, deploy to production, automate deployment with **CI/CD**.
 - **Model Groups** — a logical grouping of ML models; contains many versions of models.
 - **Model Version** — a specific version of an ML model; includes the trained weights and the inference code for the model.
-  > 🎯 Exam: "quản lý phiên bản model + trạng thái approval (approve/reject) trước khi deploy, tích hợp CI/CD" ⇒ **Model Registry**. Đừng nhầm với **Model Cards** (tài liệu/governance) hay **Model Monitor** (giám sát drift lúc chạy).
+  > 🎯 Exam: "manage model versions + approval status (approve/reject) before deploy, CI/CD integration" ⇒ **Model Registry**. Don't confuse with **Model Cards** (documentation/governance) or **Model Monitor** (runtime drift monitoring).
 
 > 📸 Source: Screenshot 2026-07-05 at 15.31.38.png
 
@@ -135,7 +135,7 @@
   - **Identify imbalances in data** — integrated with **SageMaker Data Wrangler** (bias due to imbalanced dataset).
   - **Check trained model for bias** — integrated with **SageMaker AutoPilot** experiments.
   - **Monitor your model for bias** — integrated with **SageMaker Model Monitor**; configure alerting (e.g. Amazon CloudWatch) if bias metric thresholds are exceeded.
-  > 🎯 Exam: **Clarify = bias detection + explainability (SHAP)**. "Phát hiện thiên vị / giải thích vì sao model quyết định / feature importance / fairness" ⇒ Clarify. (Explainability & transparency, đáp ứng quy định.)
+  > 🎯 Exam: **Clarify = bias detection + explainability (SHAP)**. "Detect bias / explain why the model made a decision / feature importance / fairness" ⇒ Clarify. (Explainability & transparency, meeting regulations.)
 
 > 📸 Source: Screenshot 2026-07-05 at 15.33.00.png, Screenshot 2026-07-05 at 15.35.37.png
 
@@ -196,10 +196,10 @@
   - **Computer Vision** — PSNR, SSIM, IoU.
   - **NLP** — Perplexity, BLEU, METEOR, ROUGE.
   - **Deep Learning** — Inception score, Frechet Inception distance.
-- Regression metrics (lower = better, đo sai số dự đoán giá trị liên tục):
-  - **MSE** (Mean Squared Error) — trung bình bình phương sai số; **phạt nặng lỗi lớn** (outliers).
-  - **RMSE** (Root MSE) — căn bậc hai của MSE; cùng đơn vị với target nên dễ diễn giải.
-  - **MAE** (Mean Absolute Error) — trung bình trị tuyệt đối sai số; ít nhạy với outliers hơn MSE.
+- Regression metrics (lower = better, measure prediction error for continuous values):
+  - **MSE** (Mean Squared Error) — mean of the squared errors; **penalizes large errors heavily** (outliers).
+  - **RMSE** (Root MSE) — square root of MSE; same units as the target, so it is easier to interpret.
+  - **MAE** (Mean Absolute Error) — mean of the absolute errors; less sensitive to outliers than MSE.
 - Two categories:
   - **Internal Evaluation** — evaluate the internals of the model (Accuracy, F1, Precision, Recall = "the famous four", used in all model types).
   - **External Evaluation** — evaluate the final prediction of the model.
@@ -209,8 +209,8 @@
 ## Classification Metrics — Confusion Matrix
 - A **confusion matrix** (aka **error matrix**) visualizes **model predictions (predicted)** vs **ground truth labels (actual)**; useful in classification problems.
 - Cells: **True Positives (TP)**, **True Negatives (TN)**, **False Positives (FP)**, **False Negatives (FN)**.
-  - **TP** = dự đoán Positive & đúng. **TN** = dự đoán Negative & đúng. **FP** ("false alarm", Type I error) = dự đoán Positive nhưng thực ra Negative. **FN** ("miss", Type II error) = dự đoán Negative nhưng thực ra Positive.
-  - Là nền tảng để tính accuracy/precision/recall/F1; đường chéo (TP, TN) = dự đoán đúng.
+  - **TP** = predicted Positive & correct. **TN** = predicted Negative & correct. **FP** ("false alarm", Type I error) = predicted Positive but actually Negative. **FN** ("miss", Type II error) = predicted Negative but actually Positive.
+  - This is the foundation for computing accuracy/precision/recall/F1; the diagonal (TP, TN) = correct predictions.
 - Totals shown: Total False (tF), Total True (tT), Total Negative (tN), Total Positive (tP), Total (t).
 - Matrix **size depends on the number of labels** (e.g. Apple, Banana, Orange = 3x3 = 9 cells).
 
@@ -220,11 +220,11 @@
 - **Accuracy** — use when **True Positives and True Negatives** are more important; good when **class distribution is similar**.
 - **F1-score** — use when **False Negatives and False Positives** matter to the optimal answer; good for **imbalanced class distribution**.
 - **F1 Score** = the **harmonic mean** of precision and recall; used in **binary classification**.
-- **Precision** = "how many selected items are relevant?" (TP / (TP + FP)). Trong số dự đoán Positive, bao nhiêu đúng; **cao khi FP tốn kém** (vd. spam filter chặn nhầm email quan trọng). Higher = better.
-- **Recall** (Sensitivity/TPR) = "how many relevant items are selected?" (TP / (TP + FN)). Trong số Positive thực tế, bắt được bao nhiêu; **cao khi FN tốn kém** (vd. bỏ sót chẩn đoán ung thư, phát hiện gian lận). Higher = better.
-- **Accuracy** = (TP+TN)/tổng — % tổng thể đoán đúng; higher = better. **F1** = harmonic mean của precision & recall (0–1), cân bằng cả hai; higher = better.
+- **Precision** = "how many selected items are relevant?" (TP / (TP + FP)). Of the predicted Positives, how many are correct; **high when FP is costly** (e.g. a spam filter wrongly blocking an important email). Higher = better.
+- **Recall** (Sensitivity/TPR) = "how many relevant items are selected?" (TP / (TP + FN)). Of the actual Positives, how many are caught; **high when FN is costly** (e.g. missing a cancer diagnosis, fraud detection). Higher = better.
+- **Accuracy** = (TP+TN)/total — overall % predicted correctly; higher = better. **F1** = harmonic mean of precision & recall (0–1), balancing both; higher = better.
 - Diagram: relevant vs selected elements → true positives, false positives, false negatives, true negatives.
-  > 🎯 Exam: **Accuracy gây hiểu lầm với dữ liệu imbalanced** — model đoán toàn class đa số vẫn "chính xác" 99% nhưng vô dụng → dùng **F1/Precision/Recall**. Precision↔FP, Recall↔FN. Có sự đánh đổi precision-recall (tăng cái này thường giảm cái kia).
+  > 🎯 Exam: **Accuracy is misleading with imbalanced data** — a model that always predicts the majority class can still be 99% "accurate" but useless → use **F1/Precision/Recall**. Precision↔FP, Recall↔FN. There is a precision-recall tradeoff (increasing one usually decreases the other).
 
 > 📸 Source: Screenshot 2026-07-05 at 15.39.38.png
 
@@ -232,14 +232,14 @@
 - **Receiver Operating Characteristic (ROC) curve** — plots confusion-matrix results at different **thresholds** to determine which threshold produces the least false-positives with the most true-positives.
 - Axes: **TPR** (True Positive Rate, y) vs **FPR** (False Positive Rate, x).
 - **Area Under the Curve (AUC)** — the probability that the model ranks a random positive example more highly than a random negative example.
-  - Thang **0.5 → 1.0**: 0.5 = đoán bừa (random), 1.0 = phân loại hoàn hảo; higher = better. Đo khả năng phân biệt lớp **độc lập với threshold**, dùng để so sánh models.
-  > 🎯 Exam: AUC = 0.5 nghĩa là model **vô dụng** (như tung đồng xu); AUC gần 1 = tốt. ROC/AUC vẫn hữu ích với imbalanced data và không phụ thuộc một ngưỡng cụ thể.
+  - Scale **0.5 → 1.0**: 0.5 = random guessing, 1.0 = perfect classification; higher = better. Measures class-separation ability **independent of threshold**, used to compare models.
+  > 🎯 Exam: AUC = 0.5 means the model is **useless** (like a coin flip); AUC near 1 = good. ROC/AUC is still useful with imbalanced data and does not depend on a specific threshold.
 
 > 📸 Source: Screenshot 2026-07-05 at 15.39.47.png
 
 ## Ranking Metrics
 - Important in ML such as **recommendation systems** — trying to place relevant items at the top of a list.
-- Chung: tất cả từ 0→1, **higher = better**; đánh giá thứ tự (order) chứ không chỉ đúng/sai.
+- General: all range from 0→1, **higher = better**; they evaluate order (ranking) rather than just correct/incorrect.
 - Two families: **binary relevance based** (item is good or bad) and **utility based** (item is a measurement of good/bad).
 - **Mean Reciprocal Rank (MRR)** — measures where the first item is (binary). Simple, fast, easy; focuses on the first item, not great if you want a full list.
 - **Mean Average Precision (MAP)** — uses area under the Precision-Recall curve to measure relevant items (binary). Good for a generally relevant list; not great for fine-grained lists (e.g. 1-5 stars).
@@ -248,29 +248,29 @@
 > 📸 Source: Screenshot 2026-07-05 at 15.39.54.png
 
 ## Computer Vision Metrics
-- **Peak Signal-to-Noise Ratio (PSNR)** — chất lượng ảnh/video tái tạo (đo bằng dB); **higher = better** (ít nhiễu). Dùng cho image compression, denoising, super-resolution.
-- **Structural Similarity Index Measure (SSIM)** — độ giống nhau về cấu trúc/độ sáng/tương phản giữa 2 ảnh, thang 0→1 (**1 = giống hệt**, higher = better); gần cảm nhận con người hơn PSNR.
-- **Intersection over Union (IoU)** — vùng giao / vùng hợp giữa 2 bounding boxes (predicted vs ground-truth), thang 0→1; **higher = better** (1 = trùng khít). Dùng cho **object detection & segmentation** (thường IoU ≥ 0.5 tính là đúng).
+- **Peak Signal-to-Noise Ratio (PSNR)** — quality of a reconstructed image/video (measured in dB); **higher = better** (less noise). Used for image compression, denoising, super-resolution.
+- **Structural Similarity Index Measure (SSIM)** — similarity in structure/brightness/contrast between 2 images, scale 0→1 (**1 = identical**, higher = better); closer to human perception than PSNR.
+- **Intersection over Union (IoU)** — intersection area / union area between 2 bounding boxes (predicted vs ground-truth), scale 0→1; **higher = better** (1 = exact overlap). Used for **object detection & segmentation** (usually IoU ≥ 0.5 counts as correct).
 
 > 📸 Source: Screenshot 2026-07-05 at 15.39.59.png
 
 ## NLP Metrics
-- **Perplexity** — đo mức "bối rối" của language model khi dự đoán từ tiếp theo; **lower = better** (model dự đoán text tốt hơn). Dùng đánh giá LLM/language models.
+- **Perplexity** — measures how "confused" a language model is when predicting the next word; **lower = better** (the model predicts text better). Used to evaluate LLMs/language models.
 - **Bilingual Evaluation Understudy (BLEU)** — evaluates quality of machine-translated text; score between 0 and 1 measuring similarity to high-quality reference translations.
-  - **Precision-based** (n-gram trùng với reference); **higher = better**. Đo trên toàn corpus, không tốt cho từng câu lẻ.
+  - **Precision-based** (n-grams matching the reference); **higher = better**. Measured over the whole corpus, not good for individual sentences.
   - Performs badly on individual sentences; doesn't distinguish content vs function words; not good at capturing meaning/grammaticality. Ideal for machine translation (e.g. English→French).
 - **Metric for Evaluation of Translation with Explicit Ordering (METEOR)** — machine-translation metric based on the **harmonic mean of unigram precision and recall (recall weighted higher)**; overcomes BLEU pitfalls; allows synonyms and stemmed words to match a reference word. Ideal for machine translation.
 - **Recall-Oriented Understudy for Gisting Evaluation (ROUGE)** — measures recall; ideal for **summarization** tasks.
-  - **Recall-based** (bao nhiêu n-gram của reference xuất hiện trong output); higher = better.
-  > 🎯 Exam: nhớ theo task — **BLEU/METEOR = translation** (precision, METEOR cho phép synonyms), **ROUGE = summarization** (recall), **Perplexity = đánh giá language model (lower better)**.
+  - **Recall-based** (how many of the reference's n-grams appear in the output); higher = better.
+  > 🎯 Exam: remember by task — **BLEU/METEOR = translation** (precision, METEOR allows synonyms), **ROUGE = summarization** (recall), **Perplexity = evaluate language model (lower better)**.
 
 > 📸 Source: Screenshot 2026-07-05 at 15.40.09.png
 
 ## Deep Learning Metrics
 - **Inception Score (IS)** — a metric for evaluating **Generative Adversarial Networks (GANs)**. A GAN learns to generate new unique images similar to its training data; the score measures how realistic a GAN's output is.
-  - Does NOT capture how synthetic images compare to real images. **Higher = better** (ảnh sinh ra rõ ràng & đa dạng).
+  - Does NOT capture how synthetic images compare to real images. **Higher = better** (generated images are clear & diverse).
 - **Frechet Inception Distance (FID)** — another metric for evaluating GANs; **captures how synthetic images compare to real images**.
-  - Đo **khoảng cách** giữa phân phối ảnh thật và ảnh sinh → **lower = better** (0 = giống hệt thật). Nói chung tốt/đáng tin hơn Inception Score.
-  > 🎯 Exam: hướng ngược nhau — **Inception Score cao là tốt**, **FID thấp là tốt**; FID so sánh với ảnh thật, IS thì không.
+  - Measures the **distance** between the distributions of real and generated images → **lower = better** (0 = identical to real). Generally better/more reliable than the Inception Score.
+  > 🎯 Exam: opposite directions — **high Inception Score is good**, **low FID is good**; FID compares against real images, IS does not.
 
 > 📸 Source: Screenshot 2026-07-05 at 16.51.14.png

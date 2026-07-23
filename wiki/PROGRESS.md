@@ -1,21 +1,21 @@
 # ✅ PROGRESS TRACKER — AIF-C01
 
-Theo dõi tiến độ ôn tập **gom theo 5 exam domain** (khác với [INDEX.md](INDEX.md) gom theo thứ tự bài giảng).
-Ôn theo domain giúp bám sát trọng số đề thi. Tick `[ ]` → `[x]` khi ôn xong 1 topic.
-Số trong ngoặc `(00-01)` là mã topic — tra chi tiết trong [INDEX.md](INDEX.md) và file notes tương ứng.
+Tracks study progress **grouped by the 5 exam domains** (unlike [INDEX.md](INDEX.md) which is grouped by lecture order).
+Studying by domain helps you stay aligned with the exam weights. Tick `[ ]` → `[x]` when you finish a topic.
+The number in parentheses `(00-01)` is the topic code — look up the details in [INDEX.md](INDEX.md) and the corresponding notes file.
 
-## 📊 Tổng quan tiến độ
+## 📊 Progress overview
 
-| Domain | Chủ đề | Trọng số | Số topic | Đã ôn |
+| Domain | Topic area | Weight | # topics | Studied |
 |--------|--------|:---:|:---:|:---:|
 | **D1** | Fundamentals of AI and ML | 20% | 80 | ` __ / 80 ` |
 | **D2** | Fundamentals of Generative AI | 24% | 12 | ` __ / 12 ` |
 | **D3** | Applications of Foundation Models | 28% | 72 | ` __ / 72 ` |
 | **D4** | Guidelines for Responsible AI | 14% | 7 | ` __ / 7 ` |
 | **D5** | Security, Compliance & Governance | 14% | 8 | ` __ / 8 ` |
-| | **Tổng** | 100% | **179** | ` __ / 179 ` |
+| | **Total** | 100% | **179** | ` __ / 179 ` |
 
-> 💡 Ưu tiên ôn **D3 (28%) + D2 (24%) = 52% đề thi**. D1 nhiều topic nhất nhưng phần lớn là kiến thức nền dễ nắm.
+> 💡 Prioritize studying **D3 (28%) + D2 (24%) = 52% of the exam**. D1 has the most topics but most of it is easy foundational knowledge.
 
 ---
 
@@ -125,7 +125,7 @@ Số trong ngoặc `(00-01)` là mã topic — tra chi tiết trong [INDEX.md](I
 
 ---
 
-## 🔁 Gợi ý lịch ôn
-1. **Vòng 1 — nắm nền:** đọc lần lượt part-00 → part-09 theo [INDEX.md](INDEX.md).
-2. **Vòng 2 — theo domain:** ôn theo trang này, ưu tiên D3 → D2 → D1 → D4 → D5.
-3. **Vòng 3 — làm đề:** practice exam tại www.exampro.co/aif-c01, quay lại notes cho câu sai.
+## 🔁 Suggested study schedule
+1. **Round 1 — build the foundation:** read part-00 → part-09 in order per [INDEX.md](INDEX.md).
+2. **Round 2 — by domain:** study using this page, prioritizing D3 → D2 → D1 → D4 → D5.
+3. **Round 3 — practice exams:** take the practice exam at www.exampro.co/aif-c01, and go back to the notes for questions you got wrong.

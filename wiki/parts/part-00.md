@@ -7,12 +7,12 @@
 - The **distance** of a vector (dot) from the regression line is called an **Error**.
 - Different regression algorithms use the error to predict future variables:
   - **Mean Squared Error (MSE)**
-    - Trung bình của (sai số)²; phạt mạnh sai số lớn → rất nhạy với outlier; đơn vị bị bình phương (khó diễn giải).
+    - Mean of (error)²; penalizes large errors heavily → very sensitive to outliers; units are squared (hard to interpret).
   - **Root Mean Squared Error (RMSE)**
-    - Căn của MSE; cùng đơn vị với biến mục tiêu → dễ diễn giải; vẫn nhạy với outlier.
+    - Square root of MSE; same units as the target variable → easy to interpret; still sensitive to outliers.
   - **Mean Absolute Error (MAE)**
-    - Trung bình |sai số|; robust với outlier hơn MSE/RMSE; giữ đơn vị gốc.
-    > 🎯 Exam: outlier nhiều → chọn MAE; muốn phạt nặng sai số lớn → MSE/RMSE.
+    - Mean of |error|; more robust to outliers than MSE/RMSE; keeps the original units.
+    > 🎯 Exam: many outliers → choose MAE; want to penalize large errors heavily → MSE/RMSE.
 - Regression is a **Supervised Learning** task (labeled data).
 
 > 📸 Source: Screenshot 2026-07-04 at 21.36.10.png
@@ -23,15 +23,15 @@
 - A **classification line** divides the dataset (data on one side = Sunny, the other = Rainy).
 - **Classification Algorithms:**
   - Logistic Regression
-    - Dùng sigmoid để xuất xác suất; tuyến tính & dễ diễn giải; baseline cho binary classification.
+    - Uses sigmoid to output probabilities; linear & easy to interpret; a baseline for binary classification.
   - Decision Tree / Random Forest
-    - Tree: chia dữ liệu theo luật if/else, dễ hiểu nhưng dễ overfit. Random Forest: ensemble nhiều cây (bagging) → chính xác & ổn định hơn.
+    - Tree: splits data by if/else rules, easy to understand but prone to overfitting. Random Forest: ensemble of many trees (bagging) → more accurate & stable.
   - Neural Networks
-    - Nhiều node/layer có trọng số; học được quan hệ phi tuyến phức tạp; cần nhiều dữ liệu & tính toán.
+    - Many weighted nodes/layers; can learn complex non-linear relationships; needs lots of data & compute.
   - Naive Bayes
-    - Dựa trên định lý Bayes, giả định các feature độc lập; nhanh, hợp text/spam classification.
+    - Based on Bayes' theorem, assumes features are independent; fast, suited to text/spam classification.
   - K-Nearest Neighbors (K-NN)
-    - Phân loại theo K điểm gần nhất (majority vote); lazy learner, không "train" thật; nhạy với scale & K.
+    - Classifies by the K nearest points (majority vote); a lazy learner, no real "training"; sensitive to scale & K.
 - Classification is a **Supervised Learning** task.
 
 > 📸 Source: Screenshot 2026-07-04 at 21.37.22.png
@@ -42,13 +42,13 @@
 - Example: recommend a Windows Computer to one cluster, a Mac Computer to another cluster.
 - **Clustering Algorithms:**
   - K-means
-    - Chia data thành K cụm quanh centroid (điểm trung bình); nhanh & phổ biến; phải chọn trước K, nhạy với outlier.
+    - Splits data into K clusters around a centroid (mean point); fast & popular; must pick K in advance, sensitive to outliers.
   - K-medoids
-    - Giống K-means nhưng tâm cụm là một điểm dữ liệu thật (medoid); robust với outlier hơn K-means.
+    - Like K-means but the cluster center is a real data point (medoid); more robust to outliers than K-means.
   - Density Based
-    - Nhóm theo mật độ điểm (eg. DBSCAN); tự tìm số cụm, phát hiện được noise & cụm hình dạng bất kỳ.
+    - Groups by point density (eg. DBSCAN); finds the number of clusters automatically, detects noise & clusters of any shape.
   - Hierarchical
-    - Xây cây cụm lồng nhau (dendrogram) không cần chọn trước K; trực quan nhưng chậm với data lớn.
+    - Builds a nested tree of clusters (dendrogram) without pre-choosing K; intuitive but slow on large data.
 - Clustering is an **Unsupervised Learning** task (unlabeled data).
 
 > 📸 Source: Screenshot 2026-07-04 at 21.38.49.png
@@ -81,15 +81,15 @@
   - **Classical Machine Learning** (simple data, clear features): Supervised, Unsupervised.
   - **Reinforcement Learning** (when there is no data): Real-time Decisions, Game AI, Learning Tasks, Robot Navigation.
   - **Ensemble Methods** (when quality of data is a problem): Bagging, Boosting, Stacking.
-    - **Bagging** — train nhiều model song song trên các mẫu bootstrap rồi lấy trung bình/vote; giảm variance (chống overfit). Eg. Random Forest.
-    - **Boosting** — train tuần tự, mỗi model sửa lỗi model trước; giảm bias → chính xác cao. Eg. XGBoost, AdaBoost.
-    - **Stacking** — kết hợp nhiều model khác loại qua một meta-model học cách "trộn" dự đoán.
+    - **Bagging** — train many models in parallel on bootstrap samples then average/vote; reduces variance (fights overfitting). Eg. Random Forest.
+    - **Boosting** — train sequentially, each model corrects the previous model's errors; reduces bias → high accuracy. Eg. XGBoost, AdaBoost.
+    - **Stacking** — combine multiple different model types via a meta-model that learns how to "blend" the predictions.
   - **Neural Networks and Deep Learning** (when data is complicated and/or features are unclear): CNN, RNN, GAN, MultiLayer Perceptron (MLP), Auto Encoders.
-    - **CNN** (Convolutional) — dùng bộ lọc tích chập để bắt đặc trưng không gian; chuẩn cho ảnh/thị giác máy tính.
-    - **RNN** (Recurrent) — có vòng lặp/bộ nhớ, xử lý dữ liệu tuần tự (text, time-series, âm thanh).
-    - **GAN** (Generative Adversarial) — generator vs discriminator "đối kháng" nhau; sinh dữ liệu giả thực (ảnh, deepfake).
-    - **MLP** (MultiLayer Perceptron) — mạng feed-forward fully-connected cơ bản; hợp dữ liệu bảng.
-    - **Auto Encoders** — nén (encode) rồi tái tạo (decode) dữ liệu; unsupervised, dùng cho giảm chiều & phát hiện bất thường.
+    - **CNN** (Convolutional) — uses convolutional filters to capture spatial features; the standard for images/computer vision.
+    - **RNN** (Recurrent) — has loops/memory, processes sequential data (text, time-series, audio).
+    - **GAN** (Generative Adversarial) — generator vs discriminator "compete" against each other; generates realistic fake data (images, deepfakes).
+    - **MLP** (MultiLayer Perceptron) — a basic fully-connected feed-forward network; suited to tabular data.
+    - **Auto Encoders** — compress (encode) then reconstruct (decode) data; unsupervised, used for dimensionality reduction & anomaly detection.
 
 > 📸 Source: Screenshot 2026-07-04 at 21.39.54.png
 
@@ -125,37 +125,37 @@
 ## Supervised Learning Models (Classification & Regression)
 - **Classification** = process of finding a function to divide a dataset into classes/categories (eg. "Will it be Cold or Hot tomorrow?").
   - **Classification Algorithms:** Logistic Regression, K-Nearest Neighbours, Support Vector Machines, Kernel SVM, Naive Bayes, Decision Tree Classification, Random Forest Classification.
-    - **Support Vector Machines (SVM)** — tìm siêu phẳng phân tách các lớp với biên (margin) lớn nhất; mạnh với dữ liệu nhiều chiều.
-    - **Kernel SVM** — SVM dùng "kernel trick" để phân tách dữ liệu không tuyến tính bằng cách ánh xạ lên không gian chiều cao hơn.
+    - **Support Vector Machines (SVM)** — finds a hyperplane separating the classes with the largest margin; strong on high-dimensional data.
+    - **Kernel SVM** — SVM using the "kernel trick" to separate non-linear data by mapping it to a higher-dimensional space.
 - **Regression** = process of finding a function to correlate a dataset into a continuous variable/number (eg. "What is the temperature going to be tomorrow?").
   - **Regression Algorithms:** Simple Linear Regression, Multiple Linear Regression, Polynomial Regression, Support Vector Regression, Decision Tree Regression, Random Forest Regression.
-    - **Simple Linear Regression** — 1 biến đầu vào → đường thẳng y = ax + b.
-    - **Multiple Linear Regression** — nhiều biến đầu vào; quan hệ tuyến tính đa chiều.
-    - **Polynomial Regression** — thêm số mũ để fit đường cong (quan hệ phi tuyến).
-    - **Support Vector Regression (SVR)** — áp dụng ý tưởng SVM cho regression, dự đoán trong một biên dung sai.
+    - **Simple Linear Regression** — 1 input variable → a straight line y = ax + b.
+    - **Multiple Linear Regression** — many input variables; multi-dimensional linear relationship.
+    - **Polynomial Regression** — adds exponents to fit a curve (non-linear relationship).
+    - **Support Vector Regression (SVR)** — applies the SVM idea to regression, predicting within a tolerance margin.
 
 > 📸 Source: Screenshot 2026-07-04 at 21.56.31.png
 
 ## Unsupervised Learning Models (Clustering, Association, Dimensionality Reduction)
 - **Clustering** = grouping unlabeled data based on similarities and differences.
   - **Clustering Algorithms:** K-Means, DBScan, K-Modes.
-    - **K-Means** — cụm quanh centroid, cần chọn trước K; hợp dữ liệu số.
-    - **DBScan** — cụm theo mật độ, tự tìm số cụm & phát hiện noise/outlier.
-    - **K-Modes** — biến thể K-Means cho dữ liệu categorical (dùng mode thay vì mean).
+    - **K-Means** — clusters around a centroid, need to pick K in advance; suited to numeric data.
+    - **DBScan** — clusters by density, finds the number of clusters automatically & detects noise/outliers.
+    - **K-Modes** — a K-Means variant for categorical data (uses mode instead of mean).
 - **Association** = finding a relationship between variables through association (eg. "If someone buys bread, suggest butter" — most frequently bought items).
   - **Association Algorithms:** Apriori, Euclat, FP-Growth.
-    - **Apriori** — tìm tập item xuất hiện thường xuyên theo từng bước; kinh điển nhưng chậm (quét dữ liệu nhiều lần).
-    - **Euclat** — dùng cách biểu diễn dọc (vertical/tidset) → giao tập nhanh hơn Apriori.
-    - **FP-Growth** — nén dữ liệu vào cây FP-tree, không sinh candidate → nhanh hơn Apriori nhiều.
+    - **Apriori** — finds frequent itemsets step by step; classic but slow (scans the data many times).
+    - **Euclat** — uses a vertical representation (vertical/tidset) → set intersection faster than Apriori.
+    - **FP-Growth** — compresses data into an FP-tree, generates no candidates → much faster than Apriori.
 - **Dimensionality Reduction** = reducing the amount of data while retaining data integrity; often used as a pre-processing stage.
   - **Dimensionality Reduction Algorithms:** Principal Component Analysis (PCA), Linear Discriminant Analysis (LDA), Generalized Discriminant Analysis (GDA), Singular Value Decomposition (SVD), Latent Dirichlet Allocation (LDA), Latent Semantic Analysis (LSA, pLSA, GLSA), t-SNE.
-    - **PCA** — chiếu dữ liệu lên các trục giữ nhiều phương sai nhất; unsupervised, phổ biến nhất.
-    - **Linear Discriminant Analysis (LDA)** — giảm chiều có giám sát, tối đa tách biệt giữa các lớp (dùng nhãn).
-    - **SVD** — phân rã ma trận, nền tảng cho PCA & hệ gợi ý; nén dữ liệu.
-    - **Latent Dirichlet Allocation (LDA)** — mô hình chủ đề (topic modeling) cho văn bản; đừng nhầm với Linear Discriminant Analysis dù cùng viết tắt.
-    - **LSA/pLSA** — trích chủ đề ẩn trong văn bản qua ma trận term-document.
-    - **t-SNE** — giảm chiều phi tuyến để trực quan hóa cụm ở 2D/3D; chỉ để visualize, không dùng làm feature.
-    > 🎯 Exam: "LDA" có hai nghĩa — Linear Discriminant Analysis (giảm chiều/classification) vs Latent Dirichlet Allocation (topic modeling NLP).
+    - **PCA** — projects data onto the axes retaining the most variance; unsupervised, the most common.
+    - **Linear Discriminant Analysis (LDA)** — supervised dimensionality reduction, maximizes separation between classes (uses labels).
+    - **SVD** — matrix decomposition, the foundation for PCA & recommender systems; compresses data.
+    - **Latent Dirichlet Allocation (LDA)** — topic modeling for text; don't confuse with Linear Discriminant Analysis despite the same acronym.
+    - **LSA/pLSA** — extracts latent topics in text via a term-document matrix.
+    - **t-SNE** — non-linear dimensionality reduction to visualize clusters in 2D/3D; for visualization only, not used as a feature.
+    > 🎯 Exam: "LDA" has two meanings — Linear Discriminant Analysis (dimensionality reduction/classification) vs Latent Dirichlet Allocation (NLP topic modeling).
 
 > 📸 Source: Screenshot 2026-07-04 at 21.56.42.png
 
@@ -170,13 +170,13 @@
 - **Sparse:** when the next layer decreases the number of nodes.
 - **DL Algorithms split into:**
   - **Supervised:** Fully-connected Feed Forward (FNN), Recurrent Neural Networks (RNN), Convolutional Neural Network (CNN).
-    - **FNN** — mạng fully-connected, dữ liệu chỉ đi tiến; hợp dữ liệu bảng.
-    - **RNN** — có bộ nhớ/vòng lặp cho dữ liệu tuần tự (text, time-series).
-    - **CNN** — bộ lọc tích chập bắt đặc trưng không gian; chuẩn cho ảnh.
+    - **FNN** — fully-connected network, data only moves forward; suited to tabular data.
+    - **RNN** — has memory/loops for sequential data (text, time-series).
+    - **CNN** — convolutional filters capture spatial features; the standard for images.
   - **Unsupervised:** Deep Belief Networks (DBN), Stacked Auto Encoders (SAE), Restricted Boltzmann Machines (RBMs).
-    - **RBM** — mạng 2 lớp (visible/hidden) học phân bố xác suất; khối xây dựng của DBN.
-    - **DBN** — xếp chồng nhiều RBM để học đặc trưng phân cấp (pre-training).
-    - **SAE** — xếp chồng nhiều autoencoder để học biểu diễn nén sâu.
+    - **RBM** — a 2-layer network (visible/hidden) that learns a probability distribution; the building block of a DBN.
+    - **DBN** — stacks multiple RBMs to learn hierarchical features (pre-training).
+    - **SAE** — stacks multiple autoencoders to learn a deep compressed representation.
 
 > 📸 Source: Screenshot 2026-07-04 at 21.57.00.png, Screenshot 2026-07-04 at 21.57.07.png
 
@@ -329,10 +329,10 @@
 - **Algorithm** = a set of mathematical or computer instructions to perform a specific task. An algorithm **can be composed of several smaller algorithms**. ("How do you do something.")
 - Example: **k-Nearest Neighbors (K-NN)** can be used to create a Supervised Classification ML algorithm. ("Tell me who are my closest neighbours and we will infer that I'm of the same class.")
 - Within K-NN you can use different **distance metrics** (aka algorithms): eg. Euclidean, Hamming, **Minkowski**, Manhattan.
-  - **Euclidean** — khoảng cách đường chim bay (√Σ(a−b)²); mặc định phổ biến nhất.
-  - **Manhattan** — tổng |chênh lệch| theo từng trục (đi theo ô bàn cờ); ít nhạy outlier hơn Euclidean.
-  - **Minkowski** — dạng tổng quát: p=1 → Manhattan, p=2 → Euclidean.
-  - **Hamming** — đếm số vị trí khác nhau; dùng cho dữ liệu categorical/chuỗi nhị phân.
+  - **Euclidean** — straight-line distance (√Σ(a−b)²); the most common default.
+  - **Manhattan** — sum of |differences| per axis (grid/city-block movement); less sensitive to outliers than Euclidean.
+  - **Minkowski** — the general form: p=1 → Manhattan, p=2 → Euclidean.
+  - **Hamming** — counts the number of differing positions; used for categorical data/binary strings.
 - **Function** = a way of grouping algorithms together so you can call them to compute a result (sounds like an ML model).
 - Key point: **K-NN itself is not ML, but when applied to solve an ML problem it becomes an ML Algorithm.**
 

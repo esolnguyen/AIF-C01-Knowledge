@@ -1,13 +1,13 @@
 # AIF-C01-Knowledge
 
-Bộ tài liệu tự học cho chứng chỉ **AWS Certified AI Practitioner (AIF-C01)**, build từ khóa học ExamPro/freeCodeCamp.
+Self-study material set for the **AWS Certified AI Practitioner (AIF-C01)** certification, built from the ExamPro/freeCodeCamp course.
 
-👉 Bắt đầu ở **[wiki/README.md](wiki/README.md)**.
+👉 Start at **[wiki/README.md](wiki/README.md)**.
 
-## Nội dung
-- **[wiki/INDEX.md](wiki/INDEX.md)** — index 179 topic theo thứ tự bài giảng
-- **[wiki/PROGRESS.md](wiki/PROGRESS.md)** — checklist tiến độ theo domain
-- **[wiki/GAP-ANALYSIS.md](wiki/GAP-ANALYSIS.md)** — đối chiếu vs official exam guide
-- **[wiki/parts/](wiki/parts/)** — notes chi tiết (đã enrich + verify)
-- **[wiki/enrichment/](wiki/enrichment/)** — bổ sung lỗ hổng (services, security, business framing)
-- **[wiki/practice-questions/](wiki/practice-questions/)** — 128 câu luyện đề có đáp án
+## Contents
+- **[wiki/INDEX.md](wiki/INDEX.md)** — index of 179 topics in lecture order
+- **[wiki/PROGRESS.md](wiki/PROGRESS.md)** — progress checklist by domain
+- **[wiki/GAP-ANALYSIS.md](wiki/GAP-ANALYSIS.md)** — comparison vs official exam guide
+- **[wiki/parts/](wiki/parts/)** — detailed notes (enriched + verified)
+- **[wiki/enrichment/](wiki/enrichment/)** — gap fills (services, security, business framing)
+- **[wiki/practice-questions/](wiki/practice-questions/)** — 128 practice questions with answers
