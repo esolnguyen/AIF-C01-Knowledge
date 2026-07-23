@@ -1,0 +1,22 @@
+# Build context is the REPO ROOT so the image can include the wiki content.
+# Run from the repo root:  docker compose -f rag-service/docker-compose.yml up --build
+services:
+  rag-service:
+    build:
+      context: ..
+      dockerfile: rag-service/Dockerfile
+    image: rag-service:latest
+    ports:
+      - "8009:8009"
+    env_file:
+      - .env
+    environment:
+      RAG_CHROMA_DIR: /app/rag-service/.chroma
+    volumes:
+      # Persist the vector store across container restarts.
+      - ./.chroma:/app/rag-service/.chroma
+    # First run: build the index, then serve.
+    command: >
+      sh -c "test -d .chroma && test \"$(ls -A .chroma 2>/dev/null)\" ||
+             python -m rag_service.ingest --all;
+             uvicorn rag_service.app:app --host 0.0.0.0 --port 8009"

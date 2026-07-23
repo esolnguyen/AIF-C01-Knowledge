@@ -1,0 +1,30 @@
+{
+  "wiki": "aif-c01",
+  "items": [
+    {
+      "id": "polly-vs-transcribe",
+      "question": "Which AWS service converts text to lifelike speech, and which does the reverse?",
+      "expected_keywords": ["Polly", "text-to-speech", "Transcribe", "speech-to-text"]
+    },
+    {
+      "id": "macie-purpose",
+      "question": "What is Amazon Macie used for?",
+      "expected_keywords": ["Macie", "sensitive data", "S3"]
+    },
+    {
+      "id": "rekognition-scope",
+      "question": "What kinds of tasks can Amazon Rekognition perform?",
+      "expected_keywords": ["Rekognition", "image", "video", "detect"]
+    },
+    {
+      "id": "bedrock-purpose",
+      "question": "What is Amazon Bedrock and what does it provide?",
+      "expected_keywords": ["Bedrock", "foundation model", "managed"]
+    },
+    {
+      "id": "responsible-ai",
+      "question": "Name AWS tools or practices related to responsible and governed AI.",
+      "expected_keywords": ["responsible", "governance", "bias"]
+    }
+  ]
+}

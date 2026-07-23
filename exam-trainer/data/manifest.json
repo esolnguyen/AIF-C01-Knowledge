@@ -1,0 +1,2120 @@
+[
+ {
+  "id": "part-00#00-regression",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Regression",
+  "qCount": 5,
+  "file": "data/sections/part-00_00-regression.md"
+ },
+ {
+  "id": "part-00#01-classification",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Classification",
+  "qCount": 5,
+  "file": "data/sections/part-00_01-classification.md"
+ },
+ {
+  "id": "part-00#02-clustering",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Clustering",
+  "qCount": 4,
+  "file": "data/sections/part-00_02-clustering.md"
+ },
+ {
+  "id": "part-00#03-types-of-machine-learning",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Types of Machine Learning",
+  "qCount": 5,
+  "file": "data/sections/part-00_03-types-of-machine-learning.md"
+ },
+ {
+  "id": "part-00#04-division-of-machine-learning",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Division of Machine Learning",
+  "qCount": 5,
+  "file": "data/sections/part-00_04-division-of-machine-learning.md"
+ },
+ {
+  "id": "part-00#05-classical-machine-learning",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Classical Machine Learning",
+  "qCount": 4,
+  "file": "data/sections/part-00_05-classical-machine-learning.md"
+ },
+ {
+  "id": "part-00#06-supervised-vs-unsupervised-learning",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Supervised vs Unsupervised Learning",
+  "qCount": 4,
+  "file": "data/sections/part-00_06-supervised-vs-unsupervised-learning.md"
+ },
+ {
+  "id": "part-00#07-supervised-vs-unsupervised-vs-reinforcem",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Supervised vs Unsupervised vs Reinforcement",
+  "qCount": 4,
+  "file": "data/sections/part-00_07-supervised-vs-unsupervised-vs-reinforcem.md"
+ },
+ {
+  "id": "part-00#08-supervised-learning-models-classificatio",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Supervised Learning Models (Classification & Regression)",
+  "qCount": 5,
+  "file": "data/sections/part-00_08-supervised-learning-models-classificatio.md"
+ },
+ {
+  "id": "part-00#09-unsupervised-learning-models-clustering-",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Unsupervised Learning Models (Clustering, Association, Dimensionality Reduction)",
+  "qCount": 6,
+  "file": "data/sections/part-00_09-unsupervised-learning-models-clustering-.md"
+ },
+ {
+  "id": "part-00#10-neural-networks-and-deep-learning",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Neural Networks and Deep Learning",
+  "qCount": 6,
+  "file": "data/sections/part-00_10-neural-networks-and-deep-learning.md"
+ },
+ {
+  "id": "part-00#11-introduction-to-perceptrons",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Introduction to Perceptrons",
+  "qCount": 3,
+  "file": "data/sections/part-00_11-introduction-to-perceptrons.md"
+ },
+ {
+  "id": "part-00#12-basic-perceptron-network",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Basic Perceptron Network",
+  "qCount": 4,
+  "file": "data/sections/part-00_12-basic-perceptron-network.md"
+ },
+ {
+  "id": "part-00#13-activation-functions",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Activation Functions",
+  "qCount": 4,
+  "file": "data/sections/part-00_13-activation-functions.md"
+ },
+ {
+  "id": "part-00#14-types-of-activation-functions",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Types of Activation Functions",
+  "qCount": 5,
+  "file": "data/sections/part-00_14-types-of-activation-functions.md"
+ },
+ {
+  "id": "part-00#15-linear-activation-function",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Linear Activation Function",
+  "qCount": 4,
+  "file": "data/sections/part-00_15-linear-activation-function.md"
+ },
+ {
+  "id": "part-00#16-binary-step-activation-function",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Binary Step Activation Function",
+  "qCount": 3,
+  "file": "data/sections/part-00_16-binary-step-activation-function.md"
+ },
+ {
+  "id": "part-00#17-sigmoid-activation-function",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Sigmoid Activation Function",
+  "qCount": 4,
+  "file": "data/sections/part-00_17-sigmoid-activation-function.md"
+ },
+ {
+  "id": "part-00#18-tanh-activation-function",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Tanh Activation Function",
+  "qCount": 3,
+  "file": "data/sections/part-00_18-tanh-activation-function.md"
+ },
+ {
+  "id": "part-00#19-relu-activation-function",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "ReLU Activation Function",
+  "qCount": 4,
+  "file": "data/sections/part-00_19-relu-activation-function.md"
+ },
+ {
+  "id": "part-00#20-leaky-relu-activation-function",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Leaky ReLU Activation Function",
+  "qCount": 4,
+  "file": "data/sections/part-00_20-leaky-relu-activation-function.md"
+ },
+ {
+  "id": "part-00#21-elu-activation-function",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "ELU Activation Function",
+  "qCount": 3,
+  "file": "data/sections/part-00_21-elu-activation-function.md"
+ },
+ {
+  "id": "part-00#22-swish-activation-function",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Swish Activation Function",
+  "qCount": 4,
+  "file": "data/sections/part-00_22-swish-activation-function.md"
+ },
+ {
+  "id": "part-00#23-maxout-activation-function",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Maxout Activation Function",
+  "qCount": 3,
+  "file": "data/sections/part-00_23-maxout-activation-function.md"
+ },
+ {
+  "id": "part-00#24-softmax-activation-function",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "Softmax Activation Function",
+  "qCount": 3,
+  "file": "data/sections/part-00_24-softmax-activation-function.md"
+ },
+ {
+  "id": "part-00#25-what-is-an-algorithm-and-function",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "What is an Algorithm and Function?",
+  "qCount": 5,
+  "file": "data/sections/part-00_25-what-is-an-algorithm-and-function.md"
+ },
+ {
+  "id": "part-00#26-what-is-an-ml-model",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "What is an ML Model?",
+  "qCount": 4,
+  "file": "data/sections/part-00_26-what-is-an-ml-model.md"
+ },
+ {
+  "id": "part-00#27-what-is-a-feature",
+  "source": "part-00",
+  "domainHint": [
+   1
+  ],
+  "heading": "What is a Feature?",
+  "qCount": 4,
+  "file": "data/sections/part-00_27-what-is-a-feature.md"
+ },
+ {
+  "id": "part-01#00-what-is-inference",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "What is Inference?",
+  "qCount": 4,
+  "file": "data/sections/part-01_00-what-is-inference.md"
+ },
+ {
+  "id": "part-01#01-parameters-and-hyperparameters",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Parameters and Hyperparameters",
+  "qCount": 4,
+  "file": "data/sections/part-01_01-parameters-and-hyperparameters.md"
+ },
+ {
+  "id": "part-01#02-aws-ai-service-cards",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "AWS AI Service Cards",
+  "qCount": 3,
+  "file": "data/sections/part-01_02-aws-ai-service-cards.md"
+ },
+ {
+  "id": "part-01#03-what-is-labeling",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "What is Labeling?",
+  "qCount": 4,
+  "file": "data/sections/part-01_03-what-is-labeling.md"
+ },
+ {
+  "id": "part-01#04-what-is-data-mining",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "What is Data Mining?",
+  "qCount": 4,
+  "file": "data/sections/part-01_04-what-is-data-mining.md"
+ },
+ {
+  "id": "part-01#05-data-mining-methods",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Data Mining Methods",
+  "qCount": 5,
+  "file": "data/sections/part-01_05-data-mining-methods.md"
+ },
+ {
+  "id": "part-01#06-knowledge-mining",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Knowledge Mining",
+  "qCount": 4,
+  "file": "data/sections/part-01_06-knowledge-mining.md"
+ },
+ {
+  "id": "part-01#07-what-is-data-wrangling",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "What is Data Wrangling?",
+  "qCount": 4,
+  "file": "data/sections/part-01_07-what-is-data-wrangling.md"
+ },
+ {
+  "id": "part-01#08-what-is-data-modeling",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "What is Data Modeling?",
+  "qCount": 4,
+  "file": "data/sections/part-01_08-what-is-data-modeling.md"
+ },
+ {
+  "id": "part-01#09-data-analytics",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Data Analytics",
+  "qCount": 3,
+  "file": "data/sections/part-01_09-data-analytics.md"
+ },
+ {
+  "id": "part-01#10-what-is-a-data-scientist",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "What is a Data Scientist?",
+  "qCount": 4,
+  "file": "data/sections/part-01_10-what-is-a-data-scientist.md"
+ },
+ {
+  "id": "part-01#11-data-role-comparisons",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Data Role Comparisons",
+  "qCount": 4,
+  "file": "data/sections/part-01_11-data-role-comparisons.md"
+ },
+ {
+  "id": "part-01#12-train-vs-test-vs-validation-dataset",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Train vs Test vs Validation Dataset",
+  "qCount": 4,
+  "file": "data/sections/part-01_12-train-vs-test-vs-validation-dataset.md"
+ },
+ {
+  "id": "part-01#13-corpus-and-corpus-linguistics",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Corpus and Corpus Linguistics",
+  "qCount": 4,
+  "file": "data/sections/part-01_13-corpus-and-corpus-linguistics.md"
+ },
+ {
+  "id": "part-01#14-what-is-a-data-type",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "What is a Data Type?",
+  "qCount": 5,
+  "file": "data/sections/part-01_14-what-is-a-data-type.md"
+ },
+ {
+  "id": "part-01#15-ai-vs-generative-ai",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "AI vs Generative AI",
+  "qCount": 6,
+  "file": "data/sections/part-01_15-ai-vs-generative-ai.md"
+ },
+ {
+  "id": "part-01#16-what-is-a-foundational-model",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "What is a Foundational Model?",
+  "qCount": 4,
+  "file": "data/sections/part-01_16-what-is-a-foundational-model.md"
+ },
+ {
+  "id": "part-01#17-what-is-a-large-language-model-llm",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "What is a Large Language Model (LLM)?",
+  "qCount": 3,
+  "file": "data/sections/part-01_17-what-is-a-large-language-model-llm.md"
+ },
+ {
+  "id": "part-01#18-transformer-architecture",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Transformer Architecture",
+  "qCount": 5,
+  "file": "data/sections/part-01_18-transformer-architecture.md"
+ },
+ {
+  "id": "part-01#19-tokenization",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Tokenization",
+  "qCount": 5,
+  "file": "data/sections/part-01_19-tokenization.md"
+ },
+ {
+  "id": "part-01#20-tokens-and-capacity",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Tokens and Capacity",
+  "qCount": 4,
+  "file": "data/sections/part-01_20-tokens-and-capacity.md"
+ },
+ {
+  "id": "part-01#21-what-are-embeddings",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "What are Embeddings?",
+  "qCount": 4,
+  "file": "data/sections/part-01_21-what-are-embeddings.md"
+ },
+ {
+  "id": "part-01#22-positional-encoding",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Positional Encoding",
+  "qCount": 4,
+  "file": "data/sections/part-01_22-positional-encoding.md"
+ },
+ {
+  "id": "part-01#23-attention",
+  "source": "part-01",
+  "domainHint": [
+   1,
+   2
+  ],
+  "heading": "Attention",
+  "qCount": 5,
+  "file": "data/sections/part-01_23-attention.md"
+ },
+ {
+  "id": "part-02#00-fine-tuning-llms",
+  "source": "part-02",
+  "domainHint": [
+   3,
+   2
+  ],
+  "heading": "Fine Tuning LLMs",
+  "qCount": 6,
+  "file": "data/sections/part-02_00-fine-tuning-llms.md"
+ },
+ {
+  "id": "part-02#01-amazon-bedrock",
+  "source": "part-02",
+  "domainHint": [
+   3,
+   2
+  ],
+  "heading": "Amazon Bedrock",
+  "qCount": 6,
+  "file": "data/sections/part-02_01-amazon-bedrock.md"
+ },
+ {
+  "id": "part-02#02-amazon-bedrock-model-catalog",
+  "source": "part-02",
+  "domainHint": [
+   3,
+   2
+  ],
+  "heading": "Amazon Bedrock — Model Catalog",
+  "qCount": 4,
+  "file": "data/sections/part-02_02-amazon-bedrock-model-catalog.md"
+ },
+ {
+  "id": "part-02#03-amazon-bedrock-deployment-models",
+  "source": "part-02",
+  "domainHint": [
+   3,
+   2
+  ],
+  "heading": "Amazon Bedrock — Deployment Models",
+  "qCount": 5,
+  "file": "data/sections/part-02_03-amazon-bedrock-deployment-models.md"
+ },
+ {
+  "id": "part-02#04-amazon-bedrock-playgrounds",
+  "source": "part-02",
+  "domainHint": [
+   3,
+   2
+  ],
+  "heading": "Amazon Bedrock — Playgrounds",
+  "qCount": 5,
+  "file": "data/sections/part-02_04-amazon-bedrock-playgrounds.md"
+ },
+ {
+  "id": "part-02#05-prompt-engineering-hands-on-demo",
+  "source": "part-02",
+  "domainHint": [
+   3,
+   2
+  ],
+  "heading": "Prompt Engineering (Hands-on Demo)",
+  "qCount": 6,
+  "file": "data/sections/part-02_05-prompt-engineering-hands-on-demo.md"
+ },
+ {
+  "id": "part-02#06-text-generation-hands-on-demo",
+  "source": "part-02",
+  "domainHint": [
+   3,
+   2
+  ],
+  "heading": "Text Generation (Hands-on Demo)",
+  "qCount": 5,
+  "file": "data/sections/part-02_06-text-generation-hands-on-demo.md"
+ },
+ {
+  "id": "part-02#07-amazon-bedrock-knowledge-bases",
+  "source": "part-02",
+  "domainHint": [
+   3,
+   2
+  ],
+  "heading": "Amazon Bedrock — Knowledge Bases",
+  "qCount": 6,
+  "file": "data/sections/part-02_07-amazon-bedrock-knowledge-bases.md"
+ },
+ {
+  "id": "part-03#00-knowledge-bases-rag-hands-on-demo-retrie",
+  "source": "part-03",
+  "domainHint": [
+   3
+  ],
+  "heading": "Knowledge Bases & RAG — Hands-on Demo (Retrieve / RetrieveAndGenerate)",
+  "qCount": 6,
+  "file": "data/sections/part-03_00-knowledge-bases-rag-hands-on-demo-retrie.md"
+ },
+ {
+  "id": "part-03#01-amazon-bedrock-agents",
+  "source": "part-03",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Bedrock — Agents",
+  "qCount": 5,
+  "file": "data/sections/part-03_01-amazon-bedrock-agents.md"
+ },
+ {
+  "id": "part-03#02-amazon-bedrock-agents-hands-on-demo-crea",
+  "source": "part-03",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Bedrock — Agents Hands-on Demo (create / associate KB / invoke / cleanup)",
+  "qCount": 6,
+  "file": "data/sections/part-03_02-amazon-bedrock-agents-hands-on-demo-crea.md"
+ },
+ {
+  "id": "part-03#03-amazon-bedrock-prompt-flow",
+  "source": "part-03",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Bedrock — Prompt Flow",
+  "qCount": 5,
+  "file": "data/sections/part-03_03-amazon-bedrock-prompt-flow.md"
+ },
+ {
+  "id": "part-03#04-amazon-bedrock-prompt-manager",
+  "source": "part-03",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Bedrock — Prompt Manager",
+  "qCount": 4,
+  "file": "data/sections/part-03_04-amazon-bedrock-prompt-manager.md"
+ },
+ {
+  "id": "part-03#05-amazon-bedrock-custom-models-fine-tuning",
+  "source": "part-03",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Bedrock — Custom Models (Fine-tuning vs Continued Pre-Training)",
+  "qCount": 5,
+  "file": "data/sections/part-03_05-amazon-bedrock-custom-models-fine-tuning.md"
+ },
+ {
+  "id": "part-03#06-amazon-bedrock-custom-models-pricing",
+  "source": "part-03",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Bedrock — Custom Models Pricing",
+  "qCount": 4,
+  "file": "data/sections/part-03_06-amazon-bedrock-custom-models-pricing.md"
+ },
+ {
+  "id": "part-03#07-amazon-bedrock-import-models",
+  "source": "part-03",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Bedrock — Import Models",
+  "qCount": 4,
+  "file": "data/sections/part-03_07-amazon-bedrock-import-models.md"
+ },
+ {
+  "id": "part-03#08-custom-models-fine-tuning-hands-on-demo",
+  "source": "part-03",
+  "domainHint": [
+   3
+  ],
+  "heading": "Custom Models / Fine-tuning — Hands-on Demo",
+  "qCount": 4,
+  "file": "data/sections/part-03_08-custom-models-fine-tuning-hands-on-demo.md"
+ },
+ {
+  "id": "part-03#09-foundation-model-evaluations-library-fme",
+  "source": "part-03",
+  "domainHint": [
+   3
+  ],
+  "heading": "Foundation Model Evaluations Library (fmeval)",
+  "qCount": 5,
+  "file": "data/sections/part-03_09-foundation-model-evaluations-library-fme.md"
+ },
+ {
+  "id": "part-03#10-creating-training-datasets-jsonl-format-",
+  "source": "part-03",
+  "domainHint": [
+   3
+  ],
+  "heading": "Creating Training Datasets (JSONL format) — Demo",
+  "qCount": 4,
+  "file": "data/sections/part-03_10-creating-training-datasets-jsonl-format-.md"
+ },
+ {
+  "id": "part-04#00-amazon-bedrock-fine-tuning-job-follow-al",
+  "source": "part-04",
+  "domainHint": [
+   3,
+   4,
+   5
+  ],
+  "heading": "Amazon Bedrock — Fine-tuning Job (Follow Along)",
+  "qCount": 4,
+  "file": "data/sections/part-04_00-amazon-bedrock-fine-tuning-job-follow-al.md"
+ },
+ {
+  "id": "part-04#01-amazon-bedrock-image-generation",
+  "source": "part-04",
+  "domainHint": [
+   3,
+   4,
+   5
+  ],
+  "heading": "Amazon Bedrock Image Generation",
+  "qCount": 6,
+  "file": "data/sections/part-04_01-amazon-bedrock-image-generation.md"
+ },
+ {
+  "id": "part-04#02-amazon-bedrock-guardrails",
+  "source": "part-04",
+  "domainHint": [
+   3,
+   4,
+   5
+  ],
+  "heading": "Amazon Bedrock — Guardrails",
+  "qCount": 6,
+  "file": "data/sections/part-04_02-amazon-bedrock-guardrails.md"
+ },
+ {
+  "id": "part-04#03-amazon-bedrock-invocation-logging-follow",
+  "source": "part-04",
+  "domainHint": [
+   3,
+   4,
+   5
+  ],
+  "heading": "Amazon Bedrock — Invocation Logging (Follow Along)",
+  "qCount": 4,
+  "file": "data/sections/part-04_03-amazon-bedrock-invocation-logging-follow.md"
+ },
+ {
+  "id": "part-04#04-amazon-bedrock-model-evaluation",
+  "source": "part-04",
+  "domainHint": [
+   3,
+   4,
+   5
+  ],
+  "heading": "Amazon Bedrock — Model Evaluation",
+  "qCount": 6,
+  "file": "data/sections/part-04_04-amazon-bedrock-model-evaluation.md"
+ },
+ {
+  "id": "part-04#05-third-party-vector-stores-for-genai",
+  "source": "part-04",
+  "domainHint": [
+   3,
+   4,
+   5
+  ],
+  "heading": "Third-Party Vector Stores for GenAI",
+  "qCount": 6,
+  "file": "data/sections/part-04_05-third-party-vector-stores-for-genai.md"
+ },
+ {
+  "id": "part-04#06-partyrock",
+  "source": "part-04",
+  "domainHint": [
+   3,
+   4,
+   5
+  ],
+  "heading": "PartyRock",
+  "qCount": 4,
+  "file": "data/sections/part-04_06-partyrock.md"
+ },
+ {
+  "id": "part-04#07-general-machine-learning-workflow",
+  "source": "part-04",
+  "domainHint": [
+   3,
+   4,
+   5
+  ],
+  "heading": "General Machine Learning Workflow",
+  "qCount": 6,
+  "file": "data/sections/part-04_07-general-machine-learning-workflow.md"
+ },
+ {
+  "id": "part-04#08-sagemaker-ml-pipeline",
+  "source": "part-04",
+  "domainHint": [
+   3,
+   4,
+   5
+  ],
+  "heading": "SageMaker ML Pipeline",
+  "qCount": 4,
+  "file": "data/sections/part-04_08-sagemaker-ml-pipeline.md"
+ },
+ {
+  "id": "part-05#00-sagemaker-ml-pipeline",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker ML Pipeline",
+  "qCount": 4,
+  "file": "data/sections/part-05_00-sagemaker-ml-pipeline.md"
+ },
+ {
+  "id": "part-05#01-data-readiness",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "Data Readiness",
+  "qCount": 5,
+  "file": "data/sections/part-05_01-data-readiness.md"
+ },
+ {
+  "id": "part-05#02-aws-data-wrangler-library",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "AWS Data Wrangler Library",
+  "qCount": 4,
+  "file": "data/sections/part-05_02-aws-data-wrangler-library.md"
+ },
+ {
+  "id": "part-05#03-sagemaker-data-wrangler",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker Data Wrangler",
+  "qCount": 4,
+  "file": "data/sections/part-05_03-sagemaker-data-wrangler.md"
+ },
+ {
+  "id": "part-05#04-sagemaker-canvas",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker Canvas",
+  "qCount": 4,
+  "file": "data/sections/part-05_04-sagemaker-canvas.md"
+ },
+ {
+  "id": "part-05#05-sagemaker-canvas-datasets",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker Canvas – Datasets",
+  "qCount": 3,
+  "file": "data/sections/part-05_05-sagemaker-canvas-datasets.md"
+ },
+ {
+  "id": "part-05#06-what-is-automl",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "What is AutoML?",
+  "qCount": 4,
+  "file": "data/sections/part-05_06-what-is-automl.md"
+ },
+ {
+  "id": "part-05#07-sagemaker-canvas-autopilot",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker Canvas – Autopilot",
+  "qCount": 4,
+  "file": "data/sections/part-05_07-sagemaker-canvas-autopilot.md"
+ },
+ {
+  "id": "part-05#08-sagemaker-autopilot-ml-problem-types",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker Autopilot – ML Problem Types",
+  "qCount": 5,
+  "file": "data/sections/part-05_08-sagemaker-autopilot-ml-problem-types.md"
+ },
+ {
+  "id": "part-05#09-sagemaker-canvas-ready-to-use-models",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker Canvas – Ready-to-Use Models",
+  "qCount": 4,
+  "file": "data/sections/part-05_09-sagemaker-canvas-ready-to-use-models.md"
+ },
+ {
+  "id": "part-05#10-sagemaker-feature-store",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker Feature Store",
+  "qCount": 5,
+  "file": "data/sections/part-05_10-sagemaker-feature-store.md"
+ },
+ {
+  "id": "part-05#11-sagemaker-feature-store-components",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker Feature Store – Components",
+  "qCount": 4,
+  "file": "data/sections/part-05_11-sagemaker-feature-store-components.md"
+ },
+ {
+  "id": "part-05#12-feature-store-data-ingestion",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "Feature Store – Data Ingestion",
+  "qCount": 4,
+  "file": "data/sections/part-05_12-feature-store-data-ingestion.md"
+ },
+ {
+  "id": "part-05#13-feature-store-streaming-ingestion",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "Feature Store – Streaming Ingestion",
+  "qCount": 4,
+  "file": "data/sections/part-05_13-feature-store-streaming-ingestion.md"
+ },
+ {
+  "id": "part-05#14-feature-store-batch-ingestion",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "Feature Store – Batch Ingestion",
+  "qCount": 3,
+  "file": "data/sections/part-05_14-feature-store-batch-ingestion.md"
+ },
+ {
+  "id": "part-05#15-feature-store-api",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "Feature Store – API",
+  "qCount": 4,
+  "file": "data/sections/part-05_15-feature-store-api.md"
+ },
+ {
+  "id": "part-05#16-data-wrangler-to-feature-store",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "Data Wrangler to Feature Store",
+  "qCount": 3,
+  "file": "data/sections/part-05_16-data-wrangler-to-feature-store.md"
+ },
+ {
+  "id": "part-05#17-feature-store-to-athena",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "Feature Store to Athena",
+  "qCount": 4,
+  "file": "data/sections/part-05_17-feature-store-to-athena.md"
+ },
+ {
+  "id": "part-05#18-sagemaker-endpoints",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker – Endpoints",
+  "qCount": 3,
+  "file": "data/sections/part-05_18-sagemaker-endpoints.md"
+ },
+ {
+  "id": "part-05#19-sagemaker-python-sdk",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker Python SDK",
+  "qCount": 5,
+  "file": "data/sections/part-05_19-sagemaker-python-sdk.md"
+ },
+ {
+  "id": "part-05#20-sagemaker-python-sdk-training-script",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker Python SDK – Training Script",
+  "qCount": 5,
+  "file": "data/sections/part-05_20-sagemaker-python-sdk-training-script.md"
+ },
+ {
+  "id": "part-05#21-sagemaker-python-sdk-local-mode",
+  "source": "part-05",
+  "domainHint": [
+   1,
+   3
+  ],
+  "heading": "SageMaker Python SDK – Local Mode",
+  "qCount": 5,
+  "file": "data/sections/part-05_21-sagemaker-python-sdk-local-mode.md"
+ },
+ {
+  "id": "part-06#00-sagemaker-python-sdk-session",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Python SDK — Session",
+  "qCount": 5,
+  "file": "data/sections/part-06_00-sagemaker-python-sdk-session.md"
+ },
+ {
+  "id": "part-06#01-sagemaker-python-sdk-training-source",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Python SDK — Training Source",
+  "qCount": 4,
+  "file": "data/sections/part-06_01-sagemaker-python-sdk-training-source.md"
+ },
+ {
+  "id": "part-06#02-sagemaker-python-sdk-training-channels",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Python SDK — Training Channels",
+  "qCount": 4,
+  "file": "data/sections/part-06_02-sagemaker-python-sdk-training-channels.md"
+ },
+ {
+  "id": "part-06#03-sagemaker-ground-truth-overview",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth (Overview)",
+  "qCount": 4,
+  "file": "data/sections/part-06_03-sagemaker-ground-truth-overview.md"
+ },
+ {
+  "id": "part-06#04-sagemaker-ground-truth-input-manifest-fi",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth — Input Manifest File",
+  "qCount": 6,
+  "file": "data/sections/part-06_04-sagemaker-ground-truth-input-manifest-fi.md"
+ },
+ {
+  "id": "part-06#05-sagemaker-ground-truth-cors",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth — CORS",
+  "qCount": 4,
+  "file": "data/sections/part-06_05-sagemaker-ground-truth-cors.md"
+ },
+ {
+  "id": "part-06#06-sagemaker-ground-truth-task-templates",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth — Task Templates",
+  "qCount": 3,
+  "file": "data/sections/part-06_06-sagemaker-ground-truth-task-templates.md"
+ },
+ {
+  "id": "part-06#07-sagemaker-ground-truth-labeling-images",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth — Labeling Images",
+  "qCount": 4,
+  "file": "data/sections/part-06_07-sagemaker-ground-truth-labeling-images.md"
+ },
+ {
+  "id": "part-06#08-sagemaker-ground-truth-labeling-text",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth — Labeling Text",
+  "qCount": 3,
+  "file": "data/sections/part-06_08-sagemaker-ground-truth-labeling-text.md"
+ },
+ {
+  "id": "part-06#09-sagemaker-ground-truth-labeling-video",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth — Labeling Video",
+  "qCount": 4,
+  "file": "data/sections/part-06_09-sagemaker-ground-truth-labeling-video.md"
+ },
+ {
+  "id": "part-06#10-sagemaker-ground-truth-labeling-point-cl",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth — Labeling Point Cloud",
+  "qCount": 3,
+  "file": "data/sections/part-06_10-sagemaker-ground-truth-labeling-point-cl.md"
+ },
+ {
+  "id": "part-06#11-sagemaker-ground-truth-custom-labeling",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth — Custom Labeling",
+  "qCount": 4,
+  "file": "data/sections/part-06_11-sagemaker-ground-truth-custom-labeling.md"
+ },
+ {
+  "id": "part-06#12-sagemaker-ground-truth-crowd-html",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth — Crowd HTML",
+  "qCount": 3,
+  "file": "data/sections/part-06_12-sagemaker-ground-truth-crowd-html.md"
+ },
+ {
+  "id": "part-06#13-sagemaker-ground-truth-managing-workforc",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth — Managing Workforces",
+  "qCount": 4,
+  "file": "data/sections/part-06_13-sagemaker-ground-truth-managing-workforc.md"
+ },
+ {
+  "id": "part-06#14-sagemaker-ground-truth-private-workforce",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "SageMaker Ground Truth — Private Workforce",
+  "qCount": 4,
+  "file": "data/sections/part-06_14-sagemaker-ground-truth-private-workforce.md"
+ },
+ {
+  "id": "part-06#15-automatic-model-tuning",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "Automatic Model Tuning",
+  "qCount": 4,
+  "file": "data/sections/part-06_15-automatic-model-tuning.md"
+ },
+ {
+  "id": "part-06#16-automatic-model-tuning-use-case",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "Automatic Model Tuning — Use Case",
+  "qCount": 4,
+  "file": "data/sections/part-06_16-automatic-model-tuning-use-case.md"
+ },
+ {
+  "id": "part-06#17-automatic-model-tuning-how-it-works",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "Automatic Model Tuning — How It Works",
+  "qCount": 5,
+  "file": "data/sections/part-06_17-automatic-model-tuning-how-it-works.md"
+ },
+ {
+  "id": "part-06#18-deploy-models-for-inference-on-sagemaker",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "Deploy Models for Inference on SageMaker",
+  "qCount": 5,
+  "file": "data/sections/part-06_18-deploy-models-for-inference-on-sagemaker.md"
+ },
+ {
+  "id": "part-06#19-inference-pipelines",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "Inference Pipelines",
+  "qCount": 5,
+  "file": "data/sections/part-06_19-inference-pipelines.md"
+ },
+ {
+  "id": "part-06#20-inference-pipelines-feature-processing",
+  "source": "part-06",
+  "domainHint": [
+   3
+  ],
+  "heading": "Inference Pipelines — Feature Processing",
+  "qCount": 4,
+  "file": "data/sections/part-06_20-inference-pipelines-feature-processing.md"
+ },
+ {
+  "id": "part-07#00-inference-pipelines-create-model",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Inference Pipelines — Create Model",
+  "qCount": 3,
+  "file": "data/sections/part-07_00-inference-pipelines-create-model.md"
+ },
+ {
+  "id": "part-07#01-pre-and-post-processing-variants",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Pre and Post Processing Variants",
+  "qCount": 4,
+  "file": "data/sections/part-07_01-pre-and-post-processing-variants.md"
+ },
+ {
+  "id": "part-07#02-sagemaker-hosting-services",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SageMaker Hosting Services",
+  "qCount": 4,
+  "file": "data/sections/part-07_02-sagemaker-hosting-services.md"
+ },
+ {
+  "id": "part-07#03-sagemaker-batch-transform",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SageMaker — Batch Transform",
+  "qCount": 4,
+  "file": "data/sections/part-07_03-sagemaker-batch-transform.md"
+ },
+ {
+  "id": "part-07#04-multi-model-endpoints",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Multi-Model Endpoints",
+  "qCount": 5,
+  "file": "data/sections/part-07_04-multi-model-endpoints.md"
+ },
+ {
+  "id": "part-07#05-multi-container-endpoints",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Multi-Container Endpoints",
+  "qCount": 4,
+  "file": "data/sections/part-07_05-multi-container-endpoints.md"
+ },
+ {
+  "id": "part-07#06-sagemaker-model-monitor",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SageMaker Model Monitor",
+  "qCount": 4,
+  "file": "data/sections/part-07_06-sagemaker-model-monitor.md"
+ },
+ {
+  "id": "part-07#07-model-registry",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Model Registry",
+  "qCount": 4,
+  "file": "data/sections/part-07_07-model-registry.md"
+ },
+ {
+  "id": "part-07#08-sagemaker-processing",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SageMaker Processing",
+  "qCount": 4,
+  "file": "data/sections/part-07_08-sagemaker-processing.md"
+ },
+ {
+  "id": "part-07#09-sagemaker-processing-scikit-learn",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SageMaker Processing — SciKit-Learn",
+  "qCount": 3,
+  "file": "data/sections/part-07_09-sagemaker-processing-scikit-learn.md"
+ },
+ {
+  "id": "part-07#10-sagemaker-processing-apache-spark",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SageMaker Processing — Apache Spark",
+  "qCount": 3,
+  "file": "data/sections/part-07_10-sagemaker-processing-apache-spark.md"
+ },
+ {
+  "id": "part-07#11-sagemaker-pipelines",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SageMaker Pipelines",
+  "qCount": 4,
+  "file": "data/sections/part-07_11-sagemaker-pipelines.md"
+ },
+ {
+  "id": "part-07#12-sagemaker-pipelines-pipeline-definition",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SageMaker Pipelines — Pipeline Definition",
+  "qCount": 4,
+  "file": "data/sections/part-07_12-sagemaker-pipelines-pipeline-definition.md"
+ },
+ {
+  "id": "part-07#13-sagemaker-clarify",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SageMaker Clarify",
+  "qCount": 5,
+  "file": "data/sections/part-07_13-sagemaker-clarify.md"
+ },
+ {
+  "id": "part-07#14-sagemaker-clarify-terminologies",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SageMaker Clarify — Terminologies",
+  "qCount": 5,
+  "file": "data/sections/part-07_14-sagemaker-clarify-terminologies.md"
+ },
+ {
+  "id": "part-07#15-shap-algorithm",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SHAP Algorithm",
+  "qCount": 4,
+  "file": "data/sections/part-07_15-shap-algorithm.md"
+ },
+ {
+  "id": "part-07#16-measuring-bias-in-ml-models",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Measuring Bias in ML Models",
+  "qCount": 4,
+  "file": "data/sections/part-07_16-measuring-bias-in-ml-models.md"
+ },
+ {
+  "id": "part-07#17-sagemaker-model-cards",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "SageMaker Model Cards",
+  "qCount": 3,
+  "file": "data/sections/part-07_17-sagemaker-model-cards.md"
+ },
+ {
+  "id": "part-07#18-what-are-metrics-evals",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "What are Metrics? (Evals)",
+  "qCount": 5,
+  "file": "data/sections/part-07_18-what-are-metrics-evals.md"
+ },
+ {
+  "id": "part-07#19-classification-metrics-confusion-matrix",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Classification Metrics — Confusion Matrix",
+  "qCount": 4,
+  "file": "data/sections/part-07_19-classification-metrics-confusion-matrix.md"
+ },
+ {
+  "id": "part-07#20-classification-metrics-accuracy-and-f1-s",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Classification Metrics — Accuracy and F1 Score",
+  "qCount": 5,
+  "file": "data/sections/part-07_20-classification-metrics-accuracy-and-f1-s.md"
+ },
+ {
+  "id": "part-07#21-classification-metrics-roc-curve-and-auc",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Classification Metrics — ROC Curve and AUC",
+  "qCount": 4,
+  "file": "data/sections/part-07_21-classification-metrics-roc-curve-and-auc.md"
+ },
+ {
+  "id": "part-07#22-ranking-metrics",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Ranking Metrics",
+  "qCount": 5,
+  "file": "data/sections/part-07_22-ranking-metrics.md"
+ },
+ {
+  "id": "part-07#23-computer-vision-metrics",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Computer Vision Metrics",
+  "qCount": 4,
+  "file": "data/sections/part-07_23-computer-vision-metrics.md"
+ },
+ {
+  "id": "part-07#24-nlp-metrics",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "NLP Metrics",
+  "qCount": 5,
+  "file": "data/sections/part-07_24-nlp-metrics.md"
+ },
+ {
+  "id": "part-07#25-deep-learning-metrics",
+  "source": "part-07",
+  "domainHint": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "heading": "Deep Learning Metrics",
+  "qCount": 4,
+  "file": "data/sections/part-07_25-deep-learning-metrics.md"
+ },
+ {
+  "id": "part-08#00-regression-metrics-mse-mae-rmse",
+  "source": "part-08",
+  "domainHint": [
+   3
+  ],
+  "heading": "Regression Metrics (MSE, MAE, RMSE)",
+  "qCount": 4,
+  "file": "data/sections/part-08_00-regression-metrics-mse-mae-rmse.md"
+ },
+ {
+  "id": "part-08#01-foundation-model-evaluation-library-fmev",
+  "source": "part-08",
+  "domainHint": [
+   3
+  ],
+  "heading": "Foundation Model Evaluation Library (fmeval)",
+  "qCount": 4,
+  "file": "data/sections/part-08_01-foundation-model-evaluation-library-fmev.md"
+ },
+ {
+  "id": "part-08#02-amazon-q",
+  "source": "part-08",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Q",
+  "qCount": 5,
+  "file": "data/sections/part-08_02-amazon-q.md"
+ },
+ {
+  "id": "part-08#03-amazon-codewhisperer",
+  "source": "part-08",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon CodeWhisperer",
+  "qCount": 5,
+  "file": "data/sections/part-08_03-amazon-codewhisperer.md"
+ },
+ {
+  "id": "part-08#04-amazon-codeguru",
+  "source": "part-08",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon CodeGuru",
+  "qCount": 4,
+  "file": "data/sections/part-08_04-amazon-codeguru.md"
+ },
+ {
+  "id": "part-08#05-amazon-comprehend",
+  "source": "part-08",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Comprehend",
+  "qCount": 5,
+  "file": "data/sections/part-08_05-amazon-comprehend.md"
+ },
+ {
+  "id": "part-08#06-amazon-forecast",
+  "source": "part-08",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Forecast",
+  "qCount": 4,
+  "file": "data/sections/part-08_06-amazon-forecast.md"
+ },
+ {
+  "id": "part-08#07-amazon-fraud-detector",
+  "source": "part-08",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Fraud Detector",
+  "qCount": 6,
+  "file": "data/sections/part-08_07-amazon-fraud-detector.md"
+ },
+ {
+  "id": "part-08#08-amazon-kendra",
+  "source": "part-08",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Kendra",
+  "qCount": 6,
+  "file": "data/sections/part-08_08-amazon-kendra.md"
+ },
+ {
+  "id": "part-08#09-amazon-lex",
+  "source": "part-08",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Lex",
+  "qCount": 6,
+  "file": "data/sections/part-08_09-amazon-lex.md"
+ },
+ {
+  "id": "part-08#10-amazon-polly",
+  "source": "part-08",
+  "domainHint": [
+   3
+  ],
+  "heading": "Amazon Polly",
+  "qCount": 5,
+  "file": "data/sections/part-08_10-amazon-polly.md"
+ },
+ {
+  "id": "part-09#00-amazon-polly-ssml-d3",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "Amazon Polly — SSML (D3)",
+  "qCount": 6,
+  "file": "data/sections/part-09_00-amazon-polly-ssml-d3.md"
+ },
+ {
+  "id": "part-09#01-amazon-rekognition-d3",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "Amazon Rekognition (D3)",
+  "qCount": 5,
+  "file": "data/sections/part-09_01-amazon-rekognition-d3.md"
+ },
+ {
+  "id": "part-09#02-iso-ai-standards-iso-iec-42001-2023-d5",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "ISO AI Standards — ISO/IEC 42001:2023 (D5)",
+  "qCount": 4,
+  "file": "data/sections/part-09_02-iso-ai-standards-iso-iec-42001-2023-d5.md"
+ },
+ {
+  "id": "part-09#03-algorithmic-accountability-act-d4",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "Algorithmic Accountability Act (D4)",
+  "qCount": 5,
+  "file": "data/sections/part-09_03-algorithmic-accountability-act-d4.md"
+ },
+ {
+  "id": "part-09#04-generative-ai-security-scoping-matrix-d5",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "Generative AI Security Scoping Matrix (D5)",
+  "qCount": 5,
+  "file": "data/sections/part-09_04-generative-ai-security-scoping-matrix-d5.md"
+ },
+ {
+  "id": "part-09#05-owasp-top-10-for-llm-applications-d5",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "OWASP Top 10 for LLM Applications (D5)",
+  "qCount": 5,
+  "file": "data/sections/part-09_05-owasp-top-10-for-llm-applications-d5.md"
+ },
+ {
+  "id": "part-09#06-amazon-athena-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "Amazon Athena (D1)",
+  "qCount": 5,
+  "file": "data/sections/part-09_06-amazon-athena-d1.md"
+ },
+ {
+  "id": "part-09#07-athena-sql-components-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "Athena SQL Components (D1)",
+  "qCount": 4,
+  "file": "data/sections/part-09_07-athena-sql-components-d1.md"
+ },
+ {
+  "id": "part-09#08-athena-sql-data-types-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "Athena SQL Data Types (D1)",
+  "qCount": 4,
+  "file": "data/sections/part-09_08-athena-sql-data-types-d1.md"
+ },
+ {
+  "id": "part-09#09-athena-sql-tables-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "Athena SQL — Tables (D1)",
+  "qCount": 4,
+  "file": "data/sections/part-09_09-athena-sql-tables-d1.md"
+ },
+ {
+  "id": "part-09#10-aws-glue-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "AWS Glue (D1)",
+  "qCount": 5,
+  "file": "data/sections/part-09_10-aws-glue-d1.md"
+ },
+ {
+  "id": "part-09#11-aws-glue-studio-visual-etl-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "AWS Glue Studio (Visual ETL) (D1)",
+  "qCount": 5,
+  "file": "data/sections/part-09_11-aws-glue-studio-visual-etl-d1.md"
+ },
+ {
+  "id": "part-09#12-aws-glue-jobs-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "AWS Glue Jobs (D1)",
+  "qCount": 4,
+  "file": "data/sections/part-09_12-aws-glue-jobs-d1.md"
+ },
+ {
+  "id": "part-09#13-aws-glue-data-catalog-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "AWS Glue Data Catalog (D1)",
+  "qCount": 5,
+  "file": "data/sections/part-09_13-aws-glue-data-catalog-d1.md"
+ },
+ {
+  "id": "part-09#14-aws-glue-data-catalog-crawlers-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "AWS Glue Data Catalog — Crawlers (D1)",
+  "qCount": 4,
+  "file": "data/sections/part-09_14-aws-glue-data-catalog-crawlers-d1.md"
+ },
+ {
+  "id": "part-09#15-aws-glue-data-quality-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "AWS Glue Data Quality (D1)",
+  "qCount": 5,
+  "file": "data/sections/part-09_15-aws-glue-data-quality-d1.md"
+ },
+ {
+  "id": "part-09#16-aws-glue-databrew-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "AWS Glue DataBrew (D1)",
+  "qCount": 4,
+  "file": "data/sections/part-09_16-aws-glue-databrew-d1.md"
+ },
+ {
+  "id": "part-09#17-introduction-to-data-lakes-d1",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "Introduction to Data Lakes (D1)",
+  "qCount": 5,
+  "file": "data/sections/part-09_17-introduction-to-data-lakes-d1.md"
+ },
+ {
+  "id": "part-09#18-aws-lake-formation-d1-d5",
+  "source": "part-09",
+  "domainHint": [
+   3,
+   5,
+   4
+  ],
+  "heading": "AWS Lake Formation (D1/D5)",
+  "qCount": 5,
+  "file": "data/sections/part-09_18-aws-lake-formation-d1-d5.md"
+ },
+ {
+  "id": "business-responsible-framing#00-a-genai-capabilities-limitations-for-bus",
+  "source": "business-responsible-framing",
+  "domainHint": [
+   4
+  ],
+  "heading": "A. GenAI capabilities & limitations for business (Task 2.2)",
+  "qCount": 6,
+  "file": "data/sections/business-responsible-framing_00-a-genai-capabilities-limitations-for-bus.md"
+ },
+ {
+  "id": "business-responsible-framing#01-b-when-ai-ml-is-not-appropriate-task-1-2",
+  "source": "business-responsible-framing",
+  "domainHint": [
+   4
+  ],
+  "heading": "B. When AI/ML is (not) appropriate (Task 1.2)",
+  "qCount": 5,
+  "file": "data/sections/business-responsible-framing_01-b-when-ai-ml-is-not-appropriate-task-1-2.md"
+ },
+ {
+  "id": "business-responsible-framing#02-c-business-metrics-vs-model-metrics-task",
+  "source": "business-responsible-framing",
+  "domainHint": [
+   4
+  ],
+  "heading": "C. Business metrics vs model metrics (Task 1.3)",
+  "qCount": 5,
+  "file": "data/sections/business-responsible-framing_02-c-business-metrics-vs-model-metrics-task.md"
+ },
+ {
+  "id": "business-responsible-framing#03-d-responsible-ai-framing-domain-4",
+  "source": "business-responsible-framing",
+  "domainHint": [
+   4
+  ],
+  "heading": "D. Responsible AI — framing (Domain 4)",
+  "qCount": 6,
+  "file": "data/sections/business-responsible-framing_03-d-responsible-ai-framing-domain-4.md"
+ },
+ {
+  "id": "managed-ai-services#00-1-amazon-transcribe-speech-text-asr",
+  "source": "managed-ai-services",
+  "domainHint": [
+   3
+  ],
+  "heading": "1. Amazon Transcribe — Speech → Text (ASR)",
+  "qCount": 5,
+  "file": "data/sections/managed-ai-services_00-1-amazon-transcribe-speech-text-asr.md"
+ },
+ {
+  "id": "managed-ai-services#01-2-amazon-translate-neural-machine-transl",
+  "source": "managed-ai-services",
+  "domainHint": [
+   3
+  ],
+  "heading": "2. Amazon Translate — Neural Machine Translation",
+  "qCount": 4,
+  "file": "data/sections/managed-ai-services_01-2-amazon-translate-neural-machine-transl.md"
+ },
+ {
+  "id": "managed-ai-services#02-3-amazon-personalize-recommendation-engi",
+  "source": "managed-ai-services",
+  "domainHint": [
+   3
+  ],
+  "heading": "3. Amazon Personalize — Recommendation Engine",
+  "qCount": 5,
+  "file": "data/sections/managed-ai-services_02-3-amazon-personalize-recommendation-engi.md"
+ },
+ {
+  "id": "managed-ai-services#03-4-amazon-textract-document-extraction-oc",
+  "source": "managed-ai-services",
+  "domainHint": [
+   3
+  ],
+  "heading": "4. Amazon Textract — Document Extraction (OCR+)",
+  "qCount": 5,
+  "file": "data/sections/managed-ai-services_03-4-amazon-textract-document-extraction-oc.md"
+ },
+ {
+  "id": "managed-ai-services#04-5-amazon-augmented-ai-amazon-a2i-human-r",
+  "source": "managed-ai-services",
+  "domainHint": [
+   3
+  ],
+  "heading": "5. Amazon Augmented AI (Amazon A2I) — Human Review Loops",
+  "qCount": 5,
+  "file": "data/sections/managed-ai-services_04-5-amazon-augmented-ai-amazon-a2i-human-r.md"
+ },
+ {
+  "id": "managed-ai-services#05-6-amazon-sagemaker-jumpstart-model-hub-s",
+  "source": "managed-ai-services",
+  "domainHint": [
+   3
+  ],
+  "heading": "6. Amazon SageMaker JumpStart — Model Hub & Solution Templates",
+  "qCount": 5,
+  "file": "data/sections/managed-ai-services_05-6-amazon-sagemaker-jumpstart-model-hub-s.md"
+ },
+ {
+  "id": "managed-ai-services#06-bảng-phân-biệt-nhanh-dễ-nhầm-trong-đề",
+  "source": "managed-ai-services",
+  "domainHint": [
+   3
+  ],
+  "heading": "Quick disambiguation table (easily confused in the exam)",
+  "qCount": 4,
+  "file": "data/sections/managed-ai-services_06-bảng-phân-biệt-nhanh-dễ-nhầm-trong-đề.md"
+ },
+ {
+  "id": "security-governance#00-phần-a-security-task-5-1",
+  "source": "security-governance",
+  "domainHint": [
+   5
+  ],
+  "heading": "PHẦN A — SECURITY (Task 5.1)",
+  "qCount": 6,
+  "file": "data/sections/security-governance_00-phần-a-security-task-5-1.md"
+ },
+ {
+  "id": "security-governance#01-phần-b-governance-compliance-task-5-2",
+  "source": "security-governance",
+  "domainHint": [
+   5
+  ],
+  "heading": "PHẦN B — GOVERNANCE & COMPLIANCE (Task 5.2)",
+  "qCount": 6,
+  "file": "data/sections/security-governance_01-phần-b-governance-compliance-task-5-2.md"
+ },
+ {
+  "id": "security-governance#02-cheat-service-nào-cho-việc-gì",
+  "source": "security-governance",
+  "domainHint": [
+   5
+  ],
+  "heading": "CHEAT SHEET — which service for what?",
+  "qCount": 6,
+  "file": "data/sections/security-governance_02-cheat-service-nào-cho-việc-gì.md"
+ }
+]

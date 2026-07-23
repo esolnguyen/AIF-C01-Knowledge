@@ -1,0 +1,22 @@
+# Knowledge-base registry. Add a new certificate = add an entry here + run `python -m rag_service.ingest --wiki <id>`.
+# `path` is relative to the repo root (the parent of this rag-service/ directory).
+# `repo_path_prefix` is prepended to citation `path` so the UI can locate/open the source file.
+wikis:
+  - id: aif-c01
+    name: "AWS Certified AI Practitioner (AIF-C01)"
+    description: "Self-study wiki for the AWS AIF-C01 exam: ML/GenAI fundamentals, Bedrock, SageMaker, AWS AI services, responsible AI, security & governance."
+    path: "AIF-C01-Knowledge/wiki"
+    # Directories under `path` to ingest (glob *.md within each).
+    include_dirs: ["parts", "enrichment"]
+    collection: "aif_c01_wiki"
+    # LangSmith project for traces from this wiki (optional).
+    langsmith_project: "rag-aif-c01"
+
+# To add another cert later, e.g.:
+#   - id: saa-c03
+#     name: "AWS Solutions Architect Associate (SAA-C03)"
+#     description: "..."
+#     path: "SAA-C03-Knowledge/wiki"
+#     include_dirs: ["parts"]
+#     collection: "saa_c03_wiki"
+#     langsmith_project: "rag-saa-c03"
